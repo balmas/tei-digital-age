@@ -1,0 +1,724 @@
+<atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
+    <atom:id>tlg1396.tlg001</atom:id>
+    <atom:updated>2011-04-20T00:00:00Z</atom:updated>
+    <atom:entry>
+        <atom:id>org.perseus:greekLang:tlg1396.tlg001</atom:id>
+        <atom:content type="text/xml">
+            <cts:TextInventory xmlns:cts="http://chs.harvard.edu/xmlns/cts3/ti" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://chs.harvard.edu/xmlns/cts3/ti http://dev.alpheios.net:8008/cts3/ti.xsd" tiversion="3.0.rc1">
+                <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">http://www.perseus.tufts.edu/hopper/CTS</dc:source>
+                <cts:collection id="Perseus:collection:Greco-Roman" isdefault="yes">
+                    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Greek and Roman Materials</dc:title>
+                </cts:collection>
+                <cts:collection id="Perseus:collection:Greco-Roman-protected" isdefault="no">
+                    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Greek and Roman Materials (Under Copyright)</dc:title>
+                    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Content is under copyright.</dc:rights>
+                </cts:collection>
+                <cts:textgroup projid="greekLang:tlg1396">
+                    <cts:groupname xml:lang="en">Hegesippus,</cts:groupname>
+                    <cts:work projid="greekLang:tlg001" xml:lang="grc">
+                        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Epigrammata</dc:title>
+                        <cts:translation xml:lang="eng" projid="greekLang:perseus-engX1">
+                            <cts:label xml:lang="en">Epigrammata,AG 7.276, AG 7.320, AG 7.446, AG 7.545,AP 7.276, AP 7.320, AP 7.446, AP 7.545</cts:label>
+                            <cts:description xml:lang="en">Hegesippus,,Epigrammaticus,,3. Jh. v. Chr.,creator</cts:description>
+                        </cts:translation>
+                        <cts:translation xml:lang="eng" projid="greekLang:perseus-engX2">
+                            <cts:label xml:lang="en">Epigrammata,AG 6.124, AG 6.178, AG 6.266,AP 6.124, AP 6.178, AP 6.266</cts:label>
+                            <cts:description xml:lang="en">Hegesippus,,Epigrammaticus,,3. Jh. v. Chr.,creator</cts:description>
+                        </cts:translation>
+                        <cts:translation xml:lang="eng" projid="greekLang:perseus-engX3">
+                            <cts:label xml:lang="en">Epigramma,AG 13.12,AP 13.12</cts:label>
+                            <cts:description xml:lang="en">Hegesippus,,Epigrammaticus,,3. Jh. v. Chr.,creator</cts:description>
+                        </cts:translation>
+                    </cts:work>
+                </cts:textgroup>
+            </cts:TextInventory>
+        </atom:content>
+        <atom:content type="text/xml">
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX1.WorldCat</urn>
+                <label displayLabel="WorldCat"/>
+                <location>http://www.worldcat.org/oclc/2848020</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX1.LC_Permalink</urn>
+                <label displayLabel="LC Permalink"/>
+                <location>http://lccn.loc.gov/17000015</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX1.Open_Content_Alliance</urn>
+                <label displayLabel="Open Content Alliance"/>
+                <location>http://www.archive.org/details/greekanthology02newyuoft </location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX1.Open_Library</urn>
+                <label displayLabel="Open Library"/>
+                <location>http://openlibrary.org/details/greekanthology02newyuoft</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX1.GoogleBooks</urn>
+                <label displayLabel="GoogleBooks"/>
+                <location>http://books.google.com/books?id=hBQOAAAAYAAJ</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.GoogleBooks</urn>
+                <label displayLabel="GoogleBooks"/>
+                <location>http://books.google.com/books?id=XFKEAAAAIAAJ&amp;pg=PA366#v=twopage</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.Open_Content_Alliance</urn>
+                <label displayLabel="Open Content Alliance"/>
+                <location>http://www.archive.org/stream/greekanthology01newyuoft#page/366/mode/2up</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.WorldCat</urn>
+                <label displayLabel="WorldCat"/>
+                <location>http://www.worldcat.org/oclc/2848020</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.LC_Permalink</urn>
+                <label displayLabel="LC Permalink"/>
+                <location>http://lccn.loc.gov/17000015</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.GoogleBooks</urn>
+                <label displayLabel="GoogleBooks"/>
+                <location>http://books.google.com/books?id=XFKEAAAAIAAJ</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.Open_Content_Alliance</urn>
+                <label displayLabel="Open Content Alliance"/>
+                <location>http://www.archive.org/details/greekanthology01newyuoft </location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX2.Open_Library</urn>
+                <label displayLabel="Open Library"/>
+                <location>http://openlibrary.org/details/greekanthology01newyuoft</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.GoogleBooks</urn>
+                <label displayLabel="GoogleBooks"/>
+                <location>http://books.google.com/books?id=RIxfAAAAMAAJ&amp;pg=PA8#v=twopage</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.Open_Content_Alliance</urn>
+                <label displayLabel="Open Content Alliance"/>
+                <location>http://www.archive.org/stream/greekanthology05newyuoft#page/8/mode/2up</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.LC_Permalink</urn>
+                <label displayLabel="LC Permalink"/>
+                <location>http://lccn.loc.gov/17000015</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.WorldCat</urn>
+                <label displayLabel="WorldCat"/>
+                <location>http://www.worldcat.org/oclc/2848020</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.Open_Content_Alliance</urn>
+                <label displayLabel="Open Content Alliance"/>
+                <location>http://www.archive.org/details/greekanthology05newyuoft</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.Open_Library</urn>
+                <label displayLabel="Open Library"/>
+                <location>http://openlibrary.org/ia/greekanthology05newyuoft</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:greekLang:tlg1396.tlg001.greekLang:perseus-engX3.GoogleBooks</urn>
+                <label displayLabel="GoogleBooks"/>
+                <location>http://books.google.com/books?id=RIxfAAAAMAAJ</location>
+            </refindex>
+        </atom:content>
+    </atom:entry>
+    <atom:entry>
+        <atom:id>org.perseus:greekLang:tlg1396.tlg001.perseus-engX1</atom:id>
+        <atom:content type="text/xml">
+            <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+                <mods:titleInfo xml:lang="en" type="uniform">
+                    <title xmlns="http://www.loc.gov/mods/v3">Epigrammata</title>
+                </mods:titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3" type="abbreviated">
+                    <title>AG 7.276, AG 7.320, AG 7.446, AG 7.545</title>
+                </titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3" type="abbreviated">
+                    <title>AP 7.276, AP 7.320, AP 7.446, AP 7.545</title>
+                </titleInfo>
+                <name xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/mods/v3" authority="dnb" type="personal" ns2:href="http://viaf.org/processed/DNB|102394660">
+                    <namePart>Hegesippus,</namePart>
+                    <namePart type="termsOfAddress">Epigrammaticus,</namePart>
+                    <namePart type="date">3. Jh. v. Chr.</namePart>
+                    <role>
+                        <roleTerm authority="marcrelator" type="text">creator</roleTerm>
+                    </role>
+                </name>
+                <identifier xmlns="http://www.loc.gov/mods/v3" type="tlg">1396.001</identifier>
+                <mods:identifier type="ctsurn">urn:cts:greekLang:tlg1396.tlg001.perseus-engX1</mods:identifier>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+                </language>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">grc</languageTerm>
+                </language>
+                <tableOfContents xmlns="http://www.loc.gov/mods/v3">Epigram Number 276. -- Epigram Number 320 : "On Timon." -- Epigram Number 446.
+        -- Epigram Number 545. -- </tableOfContents>
+                <part xmlns="http://www.loc.gov/mods/v3">
+                    <extent unit="pages">
+                        <list>150-151, 172-173, 244-245, 292-293</list>
+                    </extent>
+                </part>
+                <relatedItem xmlns="http://www.loc.gov/mods/v3" type="host">
+                    <titleInfo>
+                        <nonSort>The </nonSort>
+                        <title>Greek anthology</title>
+                        <partNumber>Vol II</partNumber>
+                        <partName>Sepulchral Epigrams</partName>
+                        <partNumber>Book VII</partNumber>
+                    </titleInfo>
+                    <titleInfo type="uniform">
+                        <title>Greek anthology. English &amp; Greek</title>
+                    </titleInfo>
+                    <name xmlns:ns2="http://www.w3.org/1999/xlink" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/nr89-5382.html">
+                        <namePart>Paton, W. R. (William Roger)</namePart>
+                        <namePart type="date">d. 1921</namePart>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+                        </role>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">editor</roleTerm>
+                        </role>
+                    </name>
+                    <typeOfResource>text</typeOfResource>
+                    <originInfo>
+                        <place>
+                            <placeTerm type="code" authority="marccountry">enk</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">London</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">New York</placeTerm>
+                        </place>
+                        <publisher>W. Heinemann</publisher>
+                        <publisher>G.P. Putnam's sons</publisher>
+                        <edition>Reprint</edition>
+                        <dateIssued>1917</dateIssued>
+                        <dateModified>1919</dateModified>
+                        <issuance>monographic</issuance>
+                    </originInfo>
+                    <language>
+                        <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+                    </language>
+                    <language>
+                        <languageTerm authority="iso639-2b" type="code">grc</languageTerm>
+                    </language>
+                    <physicalDescription>
+                        <form authority="marcform">print</form>
+                        <extent>5 v. illus. 17 cm.</extent>
+                    </physicalDescription>
+                    <note>Greek and English on opposite pages</note>
+                    <note>A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</note>
+                    <subject authority="lcsh">
+                        <topic>Greek poetry</topic>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Greek poetry</topic>
+                        <topic>Translations into English</topic>
+                    </subject>
+                    <classification authority="lcc">PA3611</classification>
+                    <classification authority="ddc">884</classification>
+                    <relatedItem type="series">
+                        <titleInfo>
+                            <title>Loeb classical library</title>
+                        </titleInfo>
+                    </relatedItem>
+                    <identifier type="oclc">2848020</identifier>
+                    <identifier type="lccn">17000015</identifier>
+                    <location>
+                        <url displayLabel="WorldCat">http://www.worldcat.org/oclc/2848020</url>
+                    </location>
+                    <location>
+                        <url displayLabel="LC Permalink">http://lccn.loc.gov/17000015</url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Content Alliance">http://www.archive.org/details/greekanthology02newyuoft </url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Library">http://openlibrary.org/details/greekanthology02newyuoft</url>
+                    </location>
+                    <location>
+                        <url displayLabel="GoogleBooks">http://books.google.com/books?id=hBQOAAAAYAAJ</url>
+                    </location>
+                </relatedItem>
+            </mods:mods>
+        </atom:content>
+        <atom:content type="text/xml">
+            <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+                <marc:leader>     ntm  22     uu 4500</marc:leader>
+                <marc:controlfield tag="001">greekLang:tlg1396.tlg001</marc:controlfield>
+                <marc:controlfield tag="003">perseus.org</marc:controlfield>
+                <marc:controlfield tag="008">      |           |||||||||||||||||eng grc||</marc:controlfield>
+                <marc:datafield tag="240" ind1="1" ind2="0">
+                    <marc:subfield code="a">Epigrammata</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="210" ind1="1" ind2=" ">
+                    <marc:subfield code="a">AG 7.276, AG 7.320, AG 7.446, AG 7.545</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="210" ind1="1" ind2=" ">
+                    <marc:subfield code="a">AP 7.276, AP 7.320, AP 7.446, AP 7.545</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="100" ind1="1" ind2=" ">
+                    <marc:subfield code="a">Hegesippus,</marc:subfield>
+                    <marc:subfield code="c">Epigrammaticus,</marc:subfield>
+                    <marc:subfield code="d">3. Jh. v. Chr.</marc:subfield>
+                    <marc:subfield code="e">creator</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="024" ind1="7" ind2="0">
+                    <marc:subfield code="a">urn:cts:greekLang:tlg1396.tlg001.perseus-engX1</marc:subfield>
+                    <marc:subfield code="7">perseus.org</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="505" ind1="0" ind2=" ">
+                    <marc:subfield code="a">Epigram Number 276. -- Epigram Number 320 : "On Timon." -- Epigram Number 446.
+        -- Epigram Number 545. -- </marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="773" ind1="0" ind2=" ">
+                    <marc:subfield code="t">Greek anthology</marc:subfield>
+                    <marc:subfield code="g">Vol II</marc:subfield>
+                    <marc:subfield code="g">Book VII</marc:subfield>
+                    <marc:subfield code="g">Sepulchral Epigrams</marc:subfield>
+                    <marc:subfield code="s">Greek anthology. English &amp; Greek</marc:subfield>
+                    <marc:subfield code="a">Paton, W. R. (William Roger) d. 1921, translator, editor</marc:subfield>
+                    <marc:subfield code="h">5 v. illus. 17 cm.</marc:subfield>
+                    <marc:subfield code="n">Greek and English on opposite pages</marc:subfield>
+                    <marc:subfield code="n">A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</marc:subfield>
+                    <marc:subfield code="n">Greek and English on opposite pages</marc:subfield>
+                    <marc:subfield code="n">A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.worldcat.org/oclc/2848020</marc:subfield>
+                    <marc:subfield code="3">WorldCat</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://lccn.loc.gov/17000015</marc:subfield>
+                    <marc:subfield code="3">LC Permalink</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.archive.org/details/greekanthology02newyuoft </marc:subfield>
+                    <marc:subfield code="3">Open Content Alliance</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://openlibrary.org/details/greekanthology02newyuoft</marc:subfield>
+                    <marc:subfield code="3">Open Library</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://books.google.com/books?id=hBQOAAAAYAAJ</marc:subfield>
+                    <marc:subfield code="3">GoogleBooks</marc:subfield>
+                </marc:datafield>
+            </marc:record>
+        </atom:content>
+    </atom:entry>
+    <atom:entry>
+        <atom:id>org.perseus:greekLang:tlg1396.tlg001.perseus-engX2</atom:id>
+        <atom:content type="text/xml">
+            <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+                <mods:titleInfo xml:lang="en" type="uniform">
+                    <title xmlns="http://www.loc.gov/mods/v3">Epigrammata</title>
+                </mods:titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3" type="abbreviated">
+                    <title>AG 6.124, AG 6.178, AG 6.266</title>
+                </titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3" type="abbreviated">
+                    <title>AP 6.124, AP 6.178, AP 6.266</title>
+                </titleInfo>
+                <name xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/mods/v3" authority="dnb" type="personal" ns2:href="http://viaf.org/processed/DNB|102394660">
+                    <namePart>Hegesippus,</namePart>
+                    <namePart type="termsOfAddress">Epigrammaticus,</namePart>
+                    <namePart type="date">3. Jh. v. Chr.</namePart>
+                    <role>
+                        <roleTerm authority="marcrelator" type="text">creator</roleTerm>
+                    </role>
+                </name>
+                <identifier xmlns="http://www.loc.gov/mods/v3" type="tlg">1396.001</identifier>
+                <mods:identifier type="ctsurn">urn:cts:greekLang:tlg1396.tlg001.perseus-engX2</mods:identifier>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+                </language>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">grc</languageTerm>
+                </language>
+                <tableOfContents xmlns="http://www.loc.gov/mods/v3">Epigram Number 124. -- Epigram Number 178. -- Epigram Number 266.-- </tableOfContents>
+                <part xmlns="http://www.loc.gov/mods/v3">
+                    <extent unit="pages">
+                        <list>366-367, 390-391, 442-443</list>
+                    </extent>
+                </part>
+                <location xmlns="http://www.loc.gov/mods/v3">
+                    <url displayLabel="GoogleBooks">http://books.google.com/books?id=XFKEAAAAIAAJ&amp;pg=PA366#v=twopage</url>
+                </location>
+                <location xmlns="http://www.loc.gov/mods/v3">
+                    <url displayLabel="Open Content Alliance">http://www.archive.org/stream/greekanthology01newyuoft#page/366/mode/2up</url>
+                </location>
+                <relatedItem xmlns="http://www.loc.gov/mods/v3" type="host">
+                    <titleInfo>
+                        <nonSort>The </nonSort>
+                        <title>Greek anthology</title>
+                        <partNumber>Vol I</partNumber>
+                        <partName>The Dedicatory Epigrams</partName>
+                        <partNumber>Book VI</partNumber>
+                    </titleInfo>
+                    <titleInfo type="uniform">
+                        <title>Greek anthology. English &amp; Greek</title>
+                    </titleInfo>
+                    <name xmlns:ns2="http://www.w3.org/1999/xlink" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/nr89-5382.html">
+                        <namePart>Paton, W. R. (William Roger)</namePart>
+                        <namePart type="date">d. 1921</namePart>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+                        </role>
+                    </name>
+                    <typeOfResource>text</typeOfResource>
+                    <originInfo>
+                        <place>
+                            <placeTerm type="code" authority="marccountry">enk</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">London</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">New York</placeTerm>
+                        </place>
+                        <publisher>W. Heinemann</publisher>
+                        <publisher>G.P. Putnam's sons</publisher>
+                        <edition>Reprint</edition>
+                        <dateIssued>1916</dateIssued>
+                        <dateModified>1927</dateModified>
+                        <issuance>monographic</issuance>
+                    </originInfo>
+                    <language>
+                        <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+                    </language>
+                    <language>
+                        <languageTerm authority="iso639-2b" type="code">grc</languageTerm>
+                    </language>
+                    <physicalDescription>
+                        <form authority="marcform">print</form>
+                        <extent>5 v. illus. 17 cm.</extent>
+                    </physicalDescription>
+                    <note>Greek and English on opposite pages</note>
+                    <note>A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</note>
+                    <subject authority="lcsh">
+                        <topic>Greek poetry</topic>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Greek poetry</topic>
+                        <topic>Translations into English</topic>
+                    </subject>
+                    <classification authority="lcc">PA3611</classification>
+                    <classification authority="ddc">884</classification>
+                    <relatedItem type="series">
+                        <titleInfo>
+                            <title>Loeb classical library</title>
+                        </titleInfo>
+                    </relatedItem>
+                    <identifier type="oclc">2848020</identifier>
+                    <identifier type="lccn">17000015 </identifier>
+                    <location>
+                        <url displayLabel="WorldCat">http://www.worldcat.org/oclc/2848020</url>
+                    </location>
+                    <location>
+                        <url displayLabel="LC Permalink">http://lccn.loc.gov/17000015</url>
+                    </location>
+                    <location>
+                        <url displayLabel="GoogleBooks">http://books.google.com/books?id=XFKEAAAAIAAJ</url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Content Alliance">http://www.archive.org/details/greekanthology01newyuoft </url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Library">http://openlibrary.org/details/greekanthology01newyuoft</url>
+                    </location>
+                </relatedItem>
+            </mods:mods>
+        </atom:content>
+        <atom:content type="text/xml">
+            <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+                <marc:leader>     ntm  22     uu 4500</marc:leader>
+                <marc:controlfield tag="001">greekLang:tlg1396.tlg001</marc:controlfield>
+                <marc:controlfield tag="003">perseus.org</marc:controlfield>
+                <marc:controlfield tag="008">      |           |||||||||||||||||eng grc||</marc:controlfield>
+                <marc:datafield tag="240" ind1="1" ind2="0">
+                    <marc:subfield code="a">Epigrammata</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="210" ind1="1" ind2=" ">
+                    <marc:subfield code="a">AG 6.124, AG 6.178, AG 6.266</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="210" ind1="1" ind2=" ">
+                    <marc:subfield code="a">AP 6.124, AP 6.178, AP 6.266</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="100" ind1="1" ind2=" ">
+                    <marc:subfield code="a">Hegesippus,</marc:subfield>
+                    <marc:subfield code="c">Epigrammaticus,</marc:subfield>
+                    <marc:subfield code="d">3. Jh. v. Chr.</marc:subfield>
+                    <marc:subfield code="e">creator</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="024" ind1="7" ind2="0">
+                    <marc:subfield code="a">urn:cts:greekLang:tlg1396.tlg001.perseus-engX2</marc:subfield>
+                    <marc:subfield code="7">perseus.org</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="505" ind1="0" ind2=" ">
+                    <marc:subfield code="a">Epigram Number 124. -- Epigram Number 178. -- Epigram Number 266.-- </marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2=" ">
+                    <marc:subfield code="u">http://books.google.com/books?id=XFKEAAAAIAAJ&amp;pg=PA366#v=twopage</marc:subfield>
+                    <marc:subfield code="3">GoogleBooks</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2=" ">
+                    <marc:subfield code="u">http://www.archive.org/stream/greekanthology01newyuoft#page/366/mode/2up</marc:subfield>
+                    <marc:subfield code="3">Open Content Alliance</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="773" ind1="0" ind2=" ">
+                    <marc:subfield code="t">Greek anthology</marc:subfield>
+                    <marc:subfield code="g">Vol I</marc:subfield>
+                    <marc:subfield code="g">Book VI</marc:subfield>
+                    <marc:subfield code="g">The Dedicatory Epigrams</marc:subfield>
+                    <marc:subfield code="s">Greek anthology. English &amp; Greek</marc:subfield>
+                    <marc:subfield code="a">Paton, W. R. (William Roger) d. 1921, translator</marc:subfield>
+                    <marc:subfield code="h">5 v. illus. 17 cm.</marc:subfield>
+                    <marc:subfield code="n">Greek and English on opposite pages</marc:subfield>
+                    <marc:subfield code="n">A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</marc:subfield>
+                    <marc:subfield code="n">Greek and English on opposite pages</marc:subfield>
+                    <marc:subfield code="n">A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.worldcat.org/oclc/2848020</marc:subfield>
+                    <marc:subfield code="3">WorldCat</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://lccn.loc.gov/17000015</marc:subfield>
+                    <marc:subfield code="3">LC Permalink</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://books.google.com/books?id=XFKEAAAAIAAJ</marc:subfield>
+                    <marc:subfield code="3">GoogleBooks</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.archive.org/details/greekanthology01newyuoft </marc:subfield>
+                    <marc:subfield code="3">Open Content Alliance</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://openlibrary.org/details/greekanthology01newyuoft</marc:subfield>
+                    <marc:subfield code="3">Open Library</marc:subfield>
+                </marc:datafield>
+            </marc:record>
+        </atom:content>
+    </atom:entry>
+    <atom:entry>
+        <atom:id>org.perseus:greekLang:tlg1396.tlg001.perseus-engX3</atom:id>
+        <atom:content type="text/xml">
+            <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+                <mods:titleInfo xml:lang="en" type="uniform">
+                    <mods:title>Epigrammata</mods:title>
+                </mods:titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3">
+                    <title>Epigramma</title>
+                </titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3" type="abbreviated">
+                    <title>AG 13.12</title>
+                </titleInfo>
+                <titleInfo xmlns="http://www.loc.gov/mods/v3" type="abbreviated">
+                    <title>AP 13.12</title>
+                </titleInfo>
+                <name xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/mods/v3" authority="dnb" type="personal" ns2:href="http://viaf.org/processed/DNB|102394660">
+                    <namePart>Hegesippus,</namePart>
+                    <namePart type="termsOfAddress">Epigrammaticus,</namePart>
+                    <namePart type="date">3. Jh. v. Chr.</namePart>
+                    <role>
+                        <roleTerm authority="marcrelator" type="text">creator</roleTerm>
+                    </role>
+                </name>
+                <identifier xmlns="http://www.loc.gov/mods/v3" type="tlg">1396.001</identifier>
+                <mods:identifier type="ctsurn">urn:cts:greekLang:tlg1396.tlg001.perseus-engX3</mods:identifier>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+                </language>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">grc</languageTerm>
+                </language>
+                <tableOfContents xmlns="http://www.loc.gov/mods/v3">Epigram Number 12. (Hexameters followed by iambic trimeters)</tableOfContents>
+                <part xmlns="http://www.loc.gov/mods/v3">
+                    <extent unit="pages">
+                        <list>8-9</list>
+                    </extent>
+                </part>
+                <location xmlns="http://www.loc.gov/mods/v3">
+                    <url displayLabel="GoogleBooks">http://books.google.com/books?id=RIxfAAAAMAAJ&amp;pg=PA8#v=twopage</url>
+                </location>
+                <location xmlns="http://www.loc.gov/mods/v3">
+                    <url displayLabel="Open Content Alliance">http://www.archive.org/stream/greekanthology05newyuoft#page/8/mode/2up</url>
+                </location>
+                <relatedItem xmlns="http://www.loc.gov/mods/v3" type="host">
+                    <titleInfo>
+                        <nonSort>The </nonSort>
+                        <title>Greek anthology</title>
+                        <partNumber>Vol V</partNumber>
+                        <partName>Epigrams in Various Metres</partName>
+                        <partNumber>Book XIII</partNumber>
+                    </titleInfo>
+                    <titleInfo type="uniform">
+                        <title>Greek anthology. English &amp; Greek</title>
+                    </titleInfo>
+                    <name xmlns:ns2="http://www.w3.org/1999/xlink" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/nr89-5382.html">
+                        <namePart>Paton, W. R. (William Roger)</namePart>
+                        <namePart type="date">d. 1921</namePart>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+                        </role>
+                    </name>
+                    <typeOfResource>text</typeOfResource>
+                    <originInfo>
+                        <place>
+                            <placeTerm type="code" authority="marccountry">enk</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">London</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">New York</placeTerm>
+                        </place>
+                        <publisher>W. Heinemann</publisher>
+                        <publisher>G.P. Putnam's sons</publisher>
+                        <dateIssued>1927</dateIssued>
+                        <issuance>monographic</issuance>
+                    </originInfo>
+                    <language>
+                        <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+                    </language>
+                    <language>
+                        <languageTerm authority="iso639-2b" type="code">grc</languageTerm>
+                    </language>
+                    <physicalDescription>
+                        <form authority="marcform">print</form>
+                        <extent>5 v. illus. 17 cm.</extent>
+                    </physicalDescription>
+                    <note>Greek and English on opposite pages</note>
+                    <note>A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</note>
+                    <subject authority="lcsh">
+                        <topic>Greek poetry</topic>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Greek poetry</topic>
+                        <topic>Translations into English</topic>
+                    </subject>
+                    <classification authority="lcc">PA3611</classification>
+                    <classification authority="ddc">884</classification>
+                    <relatedItem type="series">
+                        <titleInfo>
+                            <title>Loeb classical library</title>
+                        </titleInfo>
+                    </relatedItem>
+                    <identifier type="oclc">2848020</identifier>
+                    <identifier type="lccn">17000015</identifier>
+                    <identifier type="oca">greekanthology05newyuoft</identifier>
+                    <location>
+                        <url displayLabel="LC Permalink">http://lccn.loc.gov/17000015</url>
+                    </location>
+                    <location>
+                        <url displayLabel="WorldCat">http://www.worldcat.org/oclc/2848020</url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Content Alliance">http://www.archive.org/details/greekanthology05newyuoft</url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Library">http://openlibrary.org/ia/greekanthology05newyuoft</url>
+                    </location>
+                    <location>
+                        <url displayLabel="GoogleBooks">http://books.google.com/books?id=RIxfAAAAMAAJ</url>
+                    </location>
+                </relatedItem>
+            </mods:mods>
+        </atom:content>
+        <atom:content type="text/xml">
+            <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+                <marc:leader>     ntm  22     uu 4500</marc:leader>
+                <marc:controlfield tag="001">greekLang:tlg1396.tlg001</marc:controlfield>
+                <marc:controlfield tag="003">perseus.org</marc:controlfield>
+                <marc:controlfield tag="008">      |           |||||||||||||||||eng grc||</marc:controlfield>
+                <marc:datafield tag="240" ind1="1" ind2="0">
+                    <marc:subfield code="a">Epigrammata</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="245" ind1="1" ind2="0">
+                    <marc:subfield code="a">Epigramma</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="210" ind1="1" ind2=" ">
+                    <marc:subfield code="a">AG 13.12</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="210" ind1="1" ind2=" ">
+                    <marc:subfield code="a">AP 13.12</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="100" ind1="1" ind2=" ">
+                    <marc:subfield code="a">Hegesippus,</marc:subfield>
+                    <marc:subfield code="c">Epigrammaticus,</marc:subfield>
+                    <marc:subfield code="d">3. Jh. v. Chr.</marc:subfield>
+                    <marc:subfield code="e">creator</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="024" ind1="7" ind2="0">
+                    <marc:subfield code="a">urn:cts:greekLang:tlg1396.tlg001.perseus-engX3</marc:subfield>
+                    <marc:subfield code="7">perseus.org</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="505" ind1="0" ind2=" ">
+                    <marc:subfield code="a">Epigram Number 12. (Hexameters followed by iambic trimeters)</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2=" ">
+                    <marc:subfield code="u">http://books.google.com/books?id=RIxfAAAAMAAJ&amp;pg=PA8#v=twopage</marc:subfield>
+                    <marc:subfield code="3">GoogleBooks</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2=" ">
+                    <marc:subfield code="u">http://www.archive.org/stream/greekanthology05newyuoft#page/8/mode/2up</marc:subfield>
+                    <marc:subfield code="3">Open Content Alliance</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="773" ind1="0" ind2=" ">
+                    <marc:subfield code="t">Greek anthology</marc:subfield>
+                    <marc:subfield code="g">Vol V</marc:subfield>
+                    <marc:subfield code="g">Book XIII</marc:subfield>
+                    <marc:subfield code="g">Epigrams in Various Metres</marc:subfield>
+                    <marc:subfield code="s">Greek anthology. English &amp; Greek</marc:subfield>
+                    <marc:subfield code="a">Paton, W. R. (William Roger) d. 1921, translator</marc:subfield>
+                    <marc:subfield code="h">5 v. illus. 17 cm.</marc:subfield>
+                    <marc:subfield code="n">Greek and English on opposite pages</marc:subfield>
+                    <marc:subfield code="n">A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</marc:subfield>
+                    <marc:subfield code="n">Greek and English on opposite pages</marc:subfield>
+                    <marc:subfield code="n">A chronological list of the more important books containing verse translations from
+            the Greek anthology": v. 1, p. xiii-xv.</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://lccn.loc.gov/17000015</marc:subfield>
+                    <marc:subfield code="3">LC Permalink</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.worldcat.org/oclc/2848020</marc:subfield>
+                    <marc:subfield code="3">WorldCat</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.archive.org/details/greekanthology05newyuoft</marc:subfield>
+                    <marc:subfield code="3">Open Content Alliance</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://openlibrary.org/ia/greekanthology05newyuoft</marc:subfield>
+                    <marc:subfield code="3">Open Library</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://books.google.com/books?id=RIxfAAAAMAAJ</marc:subfield>
+                    <marc:subfield code="3">GoogleBooks</marc:subfield>
+                </marc:datafield>
+            </marc:record>
+        </atom:content>
+    </atom:entry>
+</atom:feed>
