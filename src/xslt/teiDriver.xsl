@@ -146,7 +146,7 @@ Created on 13 Jul 2012-->
       <meta  name="DC.Format"  content="text/html"/>
     </xsl:otherwise>
   </xsl:choose></xsl:template>
-<xsl:param name="generateParagraphIDs"></xsl:param>
+<xsl:param name="generateParagraphIDs">false</xsl:param>
 <xsl:param name="class_xptr"></xsl:param>
 <xsl:param name="outputMethod">xhtml</xsl:param>
 <xsl:param name="numberHeadings">false</xsl:param>

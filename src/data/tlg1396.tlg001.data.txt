@@ -1,19 +1,31 @@
-Catalog:
+*********************************************************************************************************************
+Catalog records:
+*********************************************************************************************************************
 CTS: http://services.perseus.tufts.edu/fedora/objects/org.perseus:greekLang.tlg1396.tlg001/datastreams/CTS/content
 MODS: http://services.perseus.tufts.edu/fedora/objects/org.perseus%3AgreekLang.tlg1396.tlg001.perseus-engX3/datastreams/MODS/content
 
-Digital Copies: 	
+*********************************************************************************************************************
+Digital Copies:
+*********************************************************************************************************************
 http://books.google.com/books?id=RIxfAAAAMAAJ&pg=PA8#v=twopage GoogleBooks
 http://www.archive.org/stream/greekanthology05newyuoft#page/8/mode/2up Open Content Alliance
 
-Greek:
-urn:cts:greekLit:tlg1396.tlg001.perseus-grc1
-Source Info (OCR):
+*********************************************************************************************************************
+Work identifier:
+*********************************************************************************************************************
+urn:cts:greekLang:tlg1396.tlg001
+
+*********************************************************************************************************************
+OCR of Source Info
+*********************************************************************************************************************
+
 LONDON : WILLIAM HEINEMANN
 NEW YORK : G. P. I’UTNAM’S SONS
 MCMXVIII 
 
-OCR:
+*********************************************************************************************************************
+OCR of Text (Greek):
+*********************************************************************************************************************
 Ηγησιππου
 Ἐττὶ Ι᾿ξαμίτρον τρίμζτρον σπαδόμενον
 ‘Ἐρρέτω ἧμα^ ἐκεῖνο, καὶ οὐλομένη σκοτόμαινα,
@@ -26,6 +38,9 @@ OCR:
 Ἄβδηρα, κρωσσῷ χαλκέῳ περισταλείς.
           
 
+*********************************************************************************************************************
+Corrected OCR of Text (Greek):
+*********************************************************************************************************************
 Corrected:
 ΗΓΗΣΙΠΠΟΥ
 ἐπὶ ἑξαμέτρου τρίμετρον ἐπαδόμενον
@@ -38,9 +53,16 @@ Corrected:
 προξείνων ὑπὸ χερσὶ λαχὼν πυρός, ἵκετο πάτρην
 Ἄβδηρα, κρωσσῷ χαλκέῳ περισταλείς.
 
-XML:
-English:
 
+*********************************************************************************************************************
+OCR of Text (English Translation):
+*********************************************************************************************************************
 12.—HEGESIPPUS (Hexameters followed by iambic trimeters') Woe worth that day and that fatal moonless night, that dreadful roaring of the wind-beaten sea, that cast ashore the ship on which Abderion, so sweet a soul, was making ineffectual vows to the gods. For she, an utter wreck, was carried by the waves on to the rugged rocks of Seriphus, whence he, having got him fire from the hands of his city's reverend hosts, came to his home Abdera, lapped in a brazen urn.
+
+*********************************************************************************************************************
+Corrected OCR of Text (English Translation):
+*********************************************************************************************************************
+12.—HEGESIPPUS (Hexameters followed by iambic trimeters') Woe worth that day and that fatal moonless night, that dreadful roaring of the wind-beaten sea, that cast ashore the ship on which Abderion, so sweet a soul, was making ineffectual vows to the gods. For she, an utter wreck, was carried by the waves on to the rugged rocks of Seriphus, whence he, having got him fire from the hands of his city's reverend hosts, came to his home Abdera, lapped in a brazen urn.
+
 
 

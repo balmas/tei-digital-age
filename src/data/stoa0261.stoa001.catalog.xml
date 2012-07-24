@@ -1,0 +1,252 @@
+<atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
+    <atom:id>stoa0261.stoa001</atom:id>
+    <atom:updated>2011-04-20T00:00:00Z</atom:updated>
+    <atom:entry>
+        <atom:id>org.perseus:latinLang:stoa0261.stoa001</atom:id>
+        <atom:content type="text/xml">
+            <cts:TextInventory xmlns:cts="http://chs.harvard.edu/xmlns/cts3/ti" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://chs.harvard.edu/xmlns/cts3/ti http://dev.alpheios.net:8008/cts3/ti.xsd" tiversion="3.0.rc1">
+                <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">http://www.perseus.tufts.edu/hopper/CTS</dc:source>
+                <cts:collection id="Perseus:collection:Greco-Roman" isdefault="yes">
+                    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Greek and Roman Materials</dc:title>
+                </cts:collection>
+                <cts:collection id="Perseus:collection:Greco-Roman-protected" isdefault="no">
+                    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Greek and Roman Materials (Under Copyright)</dc:title>
+                    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Content is under copyright.</dc:rights>
+                </cts:collection>
+                <cts:textgroup projid="latinLang:stoa0261">
+                    <cts:groupname xml:lang="en">Sidonius Apollinaris</cts:groupname>
+                    <cts:work projid="latinLang:stoa001" xml:lang="lat">
+                        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Carmina</dc:title>
+                        <cts:edition projid="latinLang:perseus-latX1">
+                            <cts:description xml:lang="en">Sidonius Apollinaris,Saint,431 or 2-ca. 487,creator Anderson, W. B. (William Blair),1877-1959,editor</cts:description>
+                        </cts:edition>
+                    </cts:work>
+                </cts:textgroup>
+            </cts:TextInventory>
+        </atom:content>
+        <atom:content type="text/xml">
+            <refindex>
+                <urn>urn:cts:latinLang:stoa0261.stoa001.latinLang:perseus-latX1.LC_Permalink</urn>
+                <label displayLabel="LC Permalink"/>
+                <location>http://lccn.loc.gov/36032948</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:latinLang:stoa0261.stoa001.latinLang:perseus-latX1.WorldCat</urn>
+                <label displayLabel="WorldCat"/>
+                <location>http://www.worldcat.org/oclc/4969859</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:latinLang:stoa0261.stoa001.latinLang:perseus-latX1.Open_Content_Alliance</urn>
+                <label displayLabel="Open Content Alliance"/>
+                <location>http://www.archive.org/details/poemsletterswith01sidouoft</location>
+            </refindex>
+            <refindex>
+                <urn>urn:cts:latinLang:stoa0261.stoa001.latinLang:perseus-latX1.Open_Library</urn>
+                <label displayLabel="Open Library"/>
+                <location>http://www.openlibrary.org/details/poemsletterswith01sidouoft</location>
+            </refindex>
+        </atom:content>
+    </atom:entry>
+    <atom:entry>
+        <atom:id>org.perseus:latinLang:stoa0261.stoa001.perseus-latX1</atom:id>
+        <atom:content type="text/xml">
+            <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+                <mods:titleInfo xml:lang="en" type="uniform">
+                    <title xmlns="http://www.loc.gov/mods/v3">Carmina</title>
+                </mods:titleInfo>
+                <name xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/mods/v3" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/n85-175817.html">
+                    <namePart>Sidonius Apollinaris</namePart>
+                    <namePart type="termsOfAddress">Saint</namePart>
+                    <namePart type="date">431 or 2-ca. 487</namePart>
+                    <role>
+                        <roleTerm authority="marcrelator" type="text">creator</roleTerm>
+                    </role>
+                </name>
+                <name xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/mods/v3" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/nr97-32374.html">
+                    <namePart>Anderson, W. B. (William Blair)</namePart>
+                    <namePart type="date">1877-1959</namePart>
+                    <role>
+                        <roleTerm authority="marcrelator" type="text">editor</roleTerm>
+                    </role>
+                </name>
+                <language xmlns="http://www.loc.gov/mods/v3">
+                    <languageTerm authority="iso639-2b" type="code">lat</languageTerm>
+                </language>
+                <identifier xmlns="http://www.loc.gov/mods/v3" type="stoa author-text">stoa0261-stoa001</identifier>
+                <identifier xmlns="http://www.loc.gov/mods/v3" type="cts-urn">urn:cts:latinLang:stoa0261.stoa0001.perseus-lat1</identifier>
+                <identifier xmlns="http://www.loc.gov/mods/v3">Perseus:text:2008.01.0551</identifier>
+                <mods:identifier type="ctsurn">urn:cts:latinLang:stoa0261.stoa001.perseus-latX1</mods:identifier>
+                <location xmlns="http://www.loc.gov/mods/v3">
+                    <url displayLabel="Perseus" note="Latin">http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0551</url>
+                </location>
+                <relatedItem xmlns="http://www.loc.gov/mods/v3" type="host">
+                    <titleInfo>
+                        <title>Poems and letters</title>
+                        <partNumber>Vol I</partNumber>
+                    </titleInfo>
+                    <name xmlns:ns2="http://www.w3.org/1999/xlink" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/n85-175817.html             ">
+                        <namePart>Sidonius Apollinaris</namePart>
+                        <namePart type="termsOfAddress">Saint</namePart>
+                        <namePart type="date">431 or 2-ca. 487</namePart>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">creator</roleTerm>
+                        </role>
+                    </name>
+                    <name xmlns:ns2="http://www.w3.org/1999/xlink" authority="naf" type="personal" ns2:href="http://errol.oclc.org/laf/nr97-32374.html">
+                        <namePart>Anderson, W. B. (William Blair)</namePart>
+                        <namePart type="date">1877-1959</namePart>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">editor</roleTerm>
+                        </role>
+                        <role>
+                            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+                        </role>
+                    </name>
+                    <typeOfResource>text</typeOfResource>
+                    <originInfo>
+                        <place>
+                            <placeTerm type="code" authority="marccountry">enk</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">London</placeTerm>
+                        </place>
+                        <place>
+                            <placeTerm type="text">Cambridge, Mass</placeTerm>
+                        </place>
+                        <publisher>W. Heinemann</publisher>
+                        <publisher>Harvard University Press</publisher>
+                        <dateIssued>1936</dateIssued>
+                        <edition>Reprint</edition>
+                        <dateModified>1963</dateModified>
+                        <issuance>monographic</issuance>
+                    </originInfo>
+                    <note type="statement of responsibility">With an English translation, introduction and notes by W.B. Anderson</note>
+                    <language objectPart="introduction">
+                        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+                    </language>
+                    <language objectPart="text">
+                        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+                    </language>
+                    <language objectPart="text">
+                        <languageTerm type="code" authority="iso639-2b">lat</languageTerm>
+                    </language>
+                    <physicalDescription>
+                        <form authority="marcform">print</form>
+                        <extent>1 vol</extent>
+                    </physicalDescription>
+                    <subject>
+                        <geographicCode authority="marcgac">e------</geographicCode>
+                        <geographicCode authority="marcgac">ff-----</geographicCode>
+                        <geographicCode authority="marcgac">aw-----</geographicCode>
+                        <geographicCode authority="marcgac">e-fr---</geographicCode>
+                    </subject>
+                    <subject authority="lcsh">
+                        <name type="personal">
+                            <namePart type="termsOfAddress">Saint</namePart>
+                            <namePart>Sidonius Apollinaris</namePart>
+                            <namePart type="date">431 or 2-ca. 487</namePart>
+                        </name>
+                        <genre>Correspondence</genre>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Bishops</topic>
+                        <geographic>France</geographic>
+                        <geographic>Clermont-Ferrand</geographic>
+                        <genre>Correspondence</genre>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Christian saints</topic>
+                        <geographic>France</geographic>
+                        <genre>Correspondence</genre>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Poets, Latin</topic>
+                        <topic>Homes and haunts</topic>
+                        <geographic>France</geographic>
+                        <geographic>Clermont-Ferrand</geographic>
+                    </subject>
+                    <subject authority="lcsh">
+                        <topic>Poets, Latin</topic>
+                        <geographic>France</geographic>
+                        <genre>Correspondence</genre>
+                    </subject>
+                    <classification authority="lcc">PA6156 .S58 1936a</classification>
+                    <relatedItem type="series">
+                        <titleInfo>
+                            <title>Loeb classical library</title>
+                        </titleInfo>
+                    </relatedItem>
+                    <identifier type="oclc">4969859</identifier>
+                    <identifier type="lccn">36032948</identifier>
+                    <identifier type="oca">poemsletterswith01sidouoft</identifier>
+                    <location>
+                        <url displayLabel="LC Permalink">http://lccn.loc.gov/36032948</url>
+                    </location>
+                    <location>
+                        <url displayLabel="WorldCat">http://www.worldcat.org/oclc/4969859</url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Content Alliance">http://www.archive.org/details/poemsletterswith01sidouoft</url>
+                    </location>
+                    <location>
+                        <url displayLabel="Open Library">http://www.openlibrary.org/details/poemsletterswith01sidouoft</url>
+                    </location>
+                </relatedItem>
+            </mods:mods>
+        </atom:content>
+        <atom:content type="text/xml">
+            <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+                <marc:leader>     ntm  22     uu 4500</marc:leader>
+                <marc:controlfield tag="001">latinLang:stoa0261.stoa001</marc:controlfield>
+                <marc:controlfield tag="003">perseus.org</marc:controlfield>
+                <marc:controlfield tag="008">      |           |||||||||||||||||lat||</marc:controlfield>
+                <marc:datafield tag="240" ind1="1" ind2="0">
+                    <marc:subfield code="a">Carmina</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="100" ind1="1" ind2=" ">
+                    <marc:subfield code="a">Sidonius Apollinaris</marc:subfield>
+                    <marc:subfield code="c">Saint</marc:subfield>
+                    <marc:subfield code="d">431 or 2-ca. 487</marc:subfield>
+                    <marc:subfield code="e">creator</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="700" ind1="1" ind2=" ">
+                    <marc:subfield code="a">Anderson, W. B. (William Blair)</marc:subfield>
+                    <marc:subfield code="d">1877-1959</marc:subfield>
+                    <marc:subfield code="e">editor</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="024" ind1="7" ind2="0">
+                    <marc:subfield code="a">urn:cts:latinLang:stoa0261.stoa001.perseus-latX1</marc:subfield>
+                    <marc:subfield code="7">perseus.org</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2=" ">
+                    <marc:subfield code="u">http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0551</marc:subfield>
+                    <marc:subfield code="3">Perseus</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="773" ind1="0" ind2=" ">
+                    <marc:subfield code="t">Poems and letters</marc:subfield>
+                    <marc:subfield code="g">Vol I</marc:subfield>
+                    <marc:subfield code="a">Sidonius Apollinaris 431 or 2-ca. 487, creatorAnderson, W. B. (William Blair) 1877-1959, editor, translator</marc:subfield>
+                    <marc:subfield code="h">1 vol</marc:subfield>
+                    <marc:subfield code="n">With an English translation, introduction and notes by W.B. Anderson</marc:subfield>
+                    <marc:subfield code="n">With an English translation, introduction and notes by W.B. Anderson</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://lccn.loc.gov/36032948</marc:subfield>
+                    <marc:subfield code="3">LC Permalink</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.worldcat.org/oclc/4969859</marc:subfield>
+                    <marc:subfield code="3">WorldCat</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.archive.org/details/poemsletterswith01sidouoft</marc:subfield>
+                    <marc:subfield code="3">Open Content Alliance</marc:subfield>
+                </marc:datafield>
+                <marc:datafield tag="856" ind1=" " ind2="2">
+                    <marc:subfield code="u">http://www.openlibrary.org/details/poemsletterswith01sidouoft</marc:subfield>
+                    <marc:subfield code="3">Open Library</marc:subfield>
+                </marc:datafield>
+            </marc:record>
+        </atom:content>
+    </atom:entry>
+</atom:feed>

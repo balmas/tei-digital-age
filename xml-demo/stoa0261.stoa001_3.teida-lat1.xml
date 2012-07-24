@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../tei-digital-age/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" n="sidon.poems_lat.xml">
+    <teiHeader type="text">
+        <fileDesc>
+            <titleStmt>
+                <title>Carmina</title>
+                <author>Sidonius Apollinaris</author>
+                <editor role="editor">W.B. Anderson</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+            </publicationStmt>
+            <sourceDesc default="false">
+                <bibl default="false">
+                    <title>Sidonius Poems and Letters, Vol 1</title>
+                    <author>Sidonius Apollinaris</author>
+                    <editor role="editor">W.B. Anderson</editor>
+                    <publisher>William Heinemann Ltd.; Harvard University Press</publisher>
+                    <pubPlace>London; Cambridge, Massachusetts</pubPlace>
+                    <date>1936</date>
+                </bibl>
+                
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <refsDecl>
+                <refState unit="text"/>
+                <refState unit="poem" delim="."/>
+                <refState unit="line" delim="."/>
+            </refsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="lat">Latin</language>
+            </langUsage>
+        </profileDesc>            
+    </teiHeader>
+    <text type="edition" n="urn:cts:latinLang:stoa0261.stoa001.teida-lat1" xml:lang="lat">
+        <body>
+            <div type="book" n="1"  sample="medial">
+                <div type="poem" n="3" org="uniform" sample="complete" part="N">
+                    <head>ad libellum </head>
+                    <p>
+                        <lb n="1"/>Quid faceret laetas segetes, quod tempus amandum
+                        <lb n="2"/>messibus et gregibus, vitibus atque apibus,
+                        <lb n="3"/>ad Maecenatis quondam sunt edita nomen;
+                        <lb n="4"/>hinc, Maro, post audes <cit><quote n="urn:cts:latinLang:phi0690.phi003:1.1">arma virumque</quote></cit> loqui,
+                        <lb n="5"/>at mihi <name>Petrus</name> erit <name ref="http://data.perseus.org/people/smith:maecenas-c-cilnius-1">Maecenas</name> temporis huius;
+                        <lb n="6"/> nam famae pelagus sidere curro suo.
+                        <lb n="7"/>si probat, emittit, si damnat carmina, celat,
+                        <lb n="8"/>nec nos ronchisono rhinocerote notat.
+                        <lb n="9"/>i, liber: hic nostrum tutatur, crede, pudorem;
+                        <lb n="10"/>hoc censore etiam displicuisse placet.  
+                        <pb n="v.1.p.56"/>
+                    </p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
+

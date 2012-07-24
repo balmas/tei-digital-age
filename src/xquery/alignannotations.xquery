@@ -28,16 +28,23 @@ import module namespace almt="http://alpheios.net/namespaces/alignment-match"
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace align="http://alpheios.net/namespaces/aligned-text";
 
-declare variable $e_docname as xs:string external;
-declare variable $e_lang as xs:string external;
-declare variable $e_encoding as xs:string external;
+declare variable $e_work as xs:string external;
+declare variable $e_edition as xs:string external;
+declare variable $e_translation as xs:string external;
+declare variable $e_transLang as xs:string external;
+declare variable $e_srcLang as xs:string external;
+declare variable $e_reverse as xs:boolean external;
+declare variable $e_path as xs:string external;
 declare variable $e_includePunc as xs:boolean external;
-declare variable $e_treebank as xs:string external;
-declare variable $e_align as xs:string external;
-declare variable $e_alignedDocname as xs:string external;
-declare variable $e_bookNum as xs:int external;
-declare variable $e_cardNum as xs:int external;
-declare variable $e_tbIndex as xs:string external;
+
+declare variable $e_docname as xs:string := 
+ if ($e_reverse) then concat($e_work,'.',$e_translation,'.xml') else concat($e_work,'.',$e_edition,'.xml');
+declare variable $e_align as xs:string := concat($e_work,'.',$e_edition,'.',$e_translation,'.align.xml');
+declare variable $e_treebank as xs:string := concat($e_work,'.',$e_edition,'.tb.xml');
+declare variable $e_transDoc as xs:string := 
+ if ($e_reverse) then concat($e_work,'.',$e_edition,'.xml') else concat($e_work,'.',$e_translation,'.xml');
+declare variable $e_lang as xs:string :=
+ if ($e_reverse) then $e_transLang else $e_srcLang;
 
 (: sets of characters by language :)
 (: non-text characters :)
@@ -260,9 +267,9 @@ declare function local:print-nodes(
                             if (contains($fixed/@nrefs, ' ')) then 
                                 string-join (
                                     for $t in tokenize(normalize-space($fixed/@nrefs),' ')
-                                    return concat($e_alignedDocname,"#xpointer(//*[@n='", $t, "'])"), ' ')
+                                    return concat($e_transDoc,"#xpointer(//*[@n='", $t, "'])"), ' ')
                             else 
-                                concat($e_alignedDocname,"#xpointer(//*[@n='", $fixed/@nrefs, "'])")
+                                concat($e_transDoc,"#xpointer(//*[@n='", $fixed/@nrefs, "'])")
                         } else (),
                     if ($fixed/@tbrefs) then 
                         attribute ana {
@@ -428,7 +435,7 @@ declare function local:fix-word(
 };
 
 
-let $doc := doc($e_docname)
+let $doc := doc(concat($e_path,$e_docname))
 let $nontext :=
   if ($s_nontext[@lang eq $e_lang])
   then
@@ -460,8 +467,8 @@ let $marked-words :=
     local:process-nodes($doc/node(), false(), "w1", $match-text, $match-nontext, $match-linenum, $match-punc)
 
 (: END MARK WORDS :)
-let $alignDoc := $e_align
-let $tbDoc := $e_treebank
+let $alignDoc := concat($e_path,'/',$e_align)
+let $tbDoc := concat($e_path,'/',$e_treebank)
 
 (: get words from original text :)
 return 
@@ -470,15 +477,7 @@ then
     (: speakers aren't treebanked so ignore words inside speaker tags :)    
     let $textWords :=         
         for $word in
-            (: $e_tbIndex, $e_bookNum and $e_cardNum support working on large Perseus texts which are chunked by book and card :)
-            if ($e_tbIndex and $e_bookNum and $e_cardNum) then 
-                $marked-words//*[starts-with(local-name(.),'div') and 
-                    @type='Book' and @n=xs:string($e_bookNum)]/tei:l[preceding-sibling::tei:milestone[position() = 1 and 
-                    @unit="card" and @n=xs:string($e_cardNum)]]/tei:w[not(parent::tei:speaker) and 
-                    not(parent::tei:label) and
-                    not(ancestor::tei:docAuthor)]
-            else 
-                $marked-words//tei:w[not(parent::tei:speaker) and not(parent::tei:label) and not(ancestor::tei:docAuthor) ]
+          $marked-words//tei:w[not(parent::tei:speaker) and not(parent::tei:label) and not(ancestor::tei:docAuthor) ]
         return
           element wrap 
           {
@@ -517,29 +516,7 @@ then
     let $tbWords :=
       if (doc-available($tbDoc))
       then
-        if (doc-available($e_tbIndex)) then
-            (: index lookup provides a way to segment large Perseus treebank document into smaller processable components :)
-            let $index := doc($e_tbIndex)//entry[@bookNum = $e_bookNum and @cardNum = $e_cardNum]
-            let $minTb := xs:int($index)
-            let $maxTb := xs:int($index/following-sibling::entry[1])   
-            for $word in doc($tbDoc)//sentence[@id > $minTb and @id <= $maxTb]/word
-                where not(matches($word/@form, $match-nontext))
-                return
-                element {QName("http://www.tei-c.org/ns/1.0","w")}
-                {
-                    (: if sentence is valid :)
-                    if (exists($word/../@id))
-                    then
-                    (: build name from sentence# and word# :)
-                        attribute n
-                        {
-                          concat($word/../@id, "-", $word/@id)
-                        }
-                    else (),
-                      data($word/@form)
-                }
-      else
-        for $word in doc($tbDoc)//word
+        for $word in doc($tbDoc)//*:word
             where not(matches($word/@form, $match-nontext))
             return
             element {QName("http://www.tei-c.org/ns/1.0","w")}

@@ -1,0 +1,40 @@
+
+.stdfooter {
+    clear: both;
+}
+
+.tei-word.highlight, .tei-aligned-word.highlight {
+    background-color: yellow;
+}
+
+#tei-tools {
+    float: right;
+    width: 25%;
+    margin-top: .5em;
+    right: -25%;
+    margin-left: 1em;  
+}
+
+#tei-lemmas,#tei-analyses {
+    overflow: scroll;
+    border: 1px solid black;
+    padding: 1em;
+    height: 400px;
+  
+}
+
+#tei-syntax-frame {
+    position: absolute;
+    bottom: -10em;
+    left: .5em;
+    width: 70%;
+}
+
+.tei-aligned-text {
+    float: right;
+    right: -40%;
+    width: 40%;
+    overflow: scroll;
+    border: 1px solid black;
+    padding: 1em;
+}

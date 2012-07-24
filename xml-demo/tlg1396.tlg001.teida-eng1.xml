@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.github.com/balmas/tei-digital-age/master/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Greek Anthology, Volume V</title>
+                <title type="sub">Machine readable text</title>
+                <editor role="editor" n="Loeb">W. R. Paton</editor>
+                <funder>The National Endownment for the Humantities</funder>
+                <funder>Google Digital Humanities Awards Program</funder>
+                <sponsor>Perseus Project, Tufts University</sponsor>
+                <principal>Gregory Crane</principal>
+                <respStmt>
+                    <resp>Prepared under the supervision of</resp>
+                    <name>Lisa Cerrato</name>
+                    <name>Alison Babeu</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+                <authority>Perseus Project</authority>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl>
+                    <bibl>
+                        <title>The Greek Anthology</title>
+                        <respStmt>
+                            <resp>with an English Translation by</resp>
+                            <name>W. R. Paton</name>
+                        </respStmt>
+                        <pubPlace>London</pubPlace>
+                        <publisher>William Heinemann Ltd.</publisher>
+                        <date>1927</date>
+                        <biblScope type="volume">5</biblScope>
+                        <biblScope type="chapter">12</biblScope>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>optical character recognition</p>
+            <refsDecl>
+                <refState unit="book" delim="."/>
+                <refState unit="chapter" n="chunk"/>
+            </refsDecl>
+            <refsDecl>
+                <refState unit="translation" delim="."/>
+            </refsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="grc">Greek</language>
+                <language ident="eng">English</language>
+                <language ident="lat">Latin</language>
+            </langUsage>
+        </profileDesc>            
+    </teiHeader>
+    <text n="urn:cts:greekLit:tlg7000.tlg001.perseus-eng1" xml:lang="eng">
+        <body>
+            <div type="book" n="13" org="uniform" sample="medial">
+                <div type="chapter" n="12" org="uniform" sample="complete">
+                    <div type="translation" n="urn:cts:greekLit:tlg1396.tlg001.perseus-eng1">
+                        <docAuthor xml:lang="lat">
+                            <name xml:lang="lat" key="tlg-1396" ref="http://en.wikipedia.org/wiki/Hegesippus_%28orator%29"><foreign xml:lang="lat">hegesippus</foreign></name>
+                        </docAuthor>
+                        <label>(Hexameters followed by iambic trimeters)</label>
+                        <p>Woe worth that day and that fatal moonless night, 
+                        that dreadful roaring of the wind-beaten sea, that 
+                        cast ashore the ship on which Abderion, so sweet a 
+                        soul, was making ineffectual vows to the gods. For 
+                        she, an utter wreck, was carried by the waves on to 
+                        the rugged rocks of <name type="place" ref="http://pleiades.stoa.org/places/590044">Seriphus</name>, 
+                         whence he, having got him fire from the hands of his city’s reverend hosts, 
+                        came to his home <name type="place" ref="http://pleiades.stoa.org/places/501323">Abdera</name>, 
+                        lapped in a brazen urn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

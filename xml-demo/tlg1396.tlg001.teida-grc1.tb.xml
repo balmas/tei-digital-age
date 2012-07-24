@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank xmlns:treebank="http://nlp.perseus.tufts.edu/syntax/treebank/1.5" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nlp.perseus.tufts.edu/syntax/treebank/1.5/treebank-1.5.xsd" 
+    version="1.5" format="aldt" xml:lang="grc">
+    <sentence id="1" document_id="urn:cts:greekLang:tlg1396.tlg001.perseus-grc1">
+        <word id="1" form="ἐρρέτω" postag="-" head="0" relation=""/>
+        <word id="2" form="ἦμαρ" postag="-" head="0" relation=""/>
+        <word id="3" form="ἐκεῖνο" postag="-" head="0" relation=""/>
+        <word id="4" form="," postag="-" head="0" relation=""/>
+        <word id="5" form="καὶ" postag="-" head="0" relation=""/>
+        <word id="6" form="οὐλομένη" postag="-" head="0" relation=""/>
+        <word id="7" form="σκοτόμαινα" postag="-" head="0" relation=""/>
+        <word id="8" form="," postag="-" head="0" relation=""/>
+        <word id="9" form="βρόμος" postag="-" head="0" relation=""/>
+        <word id="10" form="τε" postag="-" head="0" relation=""/>
+        <word id="11" form="δεινὸς" postag="-" head="0" relation=""/>
+        <word id="12" form="ἠνεμωμένης" postag="-" head="0" relation=""/>
+        <word id="13" form="ἁλός" postag="-" head="0" relation=""/>
+        <word id="14" form="," postag="-" head="0" relation=""/>
+        <word id="15" form="οἵ" postag="-" head="0" relation=""/>
+        <word id="16" form="ποτε" postag="-" head="0" relation=""/>
+        <word id="17" form="νῆ᾽" postag="-" head="0" relation=""/>
+        <word id="18" form="ἐκύλισαν" postag="-" head="0" relation=""/>
+        <word id="19" form="," postag="-" head="0" relation=""/>
+        <word id="20" form="ἐφ᾽" postag="-" head="0" relation=""/>
+        <word id="21" form="ἧς" postag="-" head="0" relation=""/>
+        <word id="22" form="ὁ" postag="-" head="0" relation=""/>
+        <word id="23" form="τὰ" postag="-" head="0" relation=""/>
+        <word id="24" form="πολλὰ" postag="-" head="0" relation=""/>
+        <word id="25" form="μελίφρων" postag="-" head="0" relation=""/>
+        <word id="26" form="Ἀβδηρίων" postag="-" head="0" relation=""/>
+        <word id="27" form="ἄπρηκτα" postag="-" head="0" relation=""/>
+        <word id="28" form="θεοῖσιν" postag="-" head="0" relation=""/>
+        <word id="29" form="εὔχετο" postag="-" head="0" relation=""/>
+        <word id="30" form=":" postag="-" head="0" relation=""/>    
+    </sentence>
+    <sentence id="2" document_id="urn:cts:greekLang:tlg1396.tlg001.perseus-grc1">
+        <word id="1" form="ῥαίσθη" postag="-" head="0" relation="nil"/>
+        <word id="2" form="γὰρ" postag="-" head="0" relation="nil"/>
+        <word id="3" form="διὰ" postag="-" head="0" relation="nil"/>
+        <word id="4" form="πάντα" postag="-" head="0" relation="nil"/>
+        <word id="5" form="," postag="-" head="0" relation="nil"/>
+        <word id="6" form="προσηνέχθη" postag="-" head="0" relation="nil"/>
+        <word id="7" form="δὲ" postag="-" head="0" relation="nil"/>
+        <word id="8" form="κλύδωνι" postag="-" head="0" relation="nil"/>
+        <word id="9" form="τρηχεῖαν" postag="-" head="0" relation="nil"/>
+        <word id="10" form="εἰς" postag="-" head="0" relation="nil"/>
+        <word id="11" form="Σέριφον" postag="-" head="0" relation="nil"/>
+        <word id="12" form="," postag="-" head="0" relation="nil"/>
+        <word id="13" form="αἰδοίων" postag="-" head="0" relation="nil"/>
+        <word id="14" form="ὅθι" postag="-" head="0" relation="nil"/>
+        <word id="15" form="προξείνων" postag="-" head="0" relation="nil"/>
+        <word id="16" form="ὑπὸ" postag="-" head="0" relation="nil"/>
+        <word id="17" form="χερσὶ" postag="-" head="0" relation="nil"/>
+        <word id="18" form="λαχὼν" postag="-" head="0" relation="nil"/>
+        <word id="19" form="πυρός" postag="-" head="0" relation="nil"/>
+        <word id="20" form="," postag="-" head="0" relation="nil"/>
+        <word id="21" form="ἵκετο" postag="-" head="0" relation="nil"/>
+        <word id="22" form="πάτρην" postag="-" head="0" relation="nil"/>
+        <word id="23" form="Ἄβδηρα" postag="-" head="0" relation="nil"/>
+        <word id="24" form="," postag="-" head="0" relation="nil"/>
+        <word id="25" form="κρωσσῷ" postag="-" head="0" relation="nil"/>
+        <word id="26" form="χαλκέῳ" postag="-" head="0" relation="nil"/>
+        <word id="27" form="περισταλείς" postag="-" head="0" relation="nil"/>
+        <word id="28" form="." postag="-" head="0" relation="nil"/>
+    </sentence>
+</treebank>

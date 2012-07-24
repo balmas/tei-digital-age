@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <title>Alpheios:View Syntax</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="alpheios-editTransformURL"
+      content="http://repos1.alpheios.net/exist2/rest/db/xq/treebank-gettransform.xq"/>
+    <link rel="stylesheet" type="text/css" href="http://repos1.alpheios.net/exist2/rest/db/css/alph-treebank-edit.css"/>
+    <script type="text/javascript" src="http://repos1.alpheios.net/exist2/rest/db/script/alph-treebank-edit.js"></script>
+    <script type="text/javascript" src="http://repos1.alpheios.net/exist2/rest/db/script/alph-edit-utils.js"></script>
+    <script type="text/javascript" src="http://repos1.alpheios.net/exist2/rest/db/script/jquery-1.2.6-alph.js"></script>
+
+    <!-- A URL can be supplied that can be used to retrieve information about
+         the document and treebank or else the following information should be
+         supplied directly in metadata parameters or URL call parameters:
+            numSentences (if sentence navigation is desired), lang, direction
+         (See below for descriptions of parameters.)
+         If the URL is present then it will take precedence over the parameter
+         values, so if the parameters are to be used then the URL should be
+         commented out.
+    -->
+    <meta name="alpheios-getInfoURL" content="http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getinfo.xq"/>
+
+    <!-- Parameters controlling behavior of the editor
+         All names are prefixed in the <meta> tags with "alpheios-param-".
+         All can be overridden by parameters supplied at invocation time to
+         the url, using the names below without the "alpheios-param-" prefix.
+            app: [editor|viewer]
+              Whether we're editing or just viewing the tree.
+              If set to "viewer", other parameters controlling editing
+              behavior will be ignored.
+            numSentences: integer > 0
+              Number of sentences in the document.  Only needed if sentence
+              navigation is enabled (sentenceNavigation = "yes").
+            lang:
+              Language of the sentence.
+            direction: [ltr|rtl]
+              Direction of text flow.
+            arcEditing: [yes|no]
+              If "yes", allow arc label editing
+              and div#label-menus > div#arc-label-menus should be defined
+              either explicitly or built from the format description.
+            nodeEditing: [yes|no]
+              If "yes", allow node label editing
+              and div#label-menus > div#node-label-menus should be defined
+              either explicitly or built from the format description.
+            buildContent:
+              What content to build from treebank description.
+              This can only be done if the URL to retrieve treebank info
+              is supplied above.
+              Contains a comma-separated list of possible values:
+                menus = menus for arc and/or node label editing
+                style = style sheet controlling display of values
+                key = key describing values
+              If not enabled, the content must be supplied directly in this
+              file.  Search for "buildContent" to find the locations.
+            sentenceNavigation: [yes|no]
+              If "yes", include controls to allow navigation between sentences
+              within the editor.  For this to work, the sentence ids must be
+              integers running from 1 to maxSentId, where maxSentId is obtained
+              either from invoking the alpheios-getInfoURL or from the
+              numSentences parameter.
+            sequential: [yes|no]
+              If "yes", initially only show first word in sentence and enable
+              button to reveal next word.
+    -->
+    <meta name="alpheios-param-doc" content="user-lat-aldt"/>
+    <meta name="alpheios-param-app" content="viewer"/>
+    <meta name="alpheios-param-numSentences" content="1"/>
+    <meta name="alpheios-param-lang" content="la"/>
+    <meta name="alpheios-param-direction" content="ltr"/>
+    <meta name="alpheios-param-arcEditing" content="yes"/>
+    <meta name="alpheios-param-nodeEditing" content="yes"/>
+    <meta name="alpheios-param-buildContent" content="menus,key"/>
+    <meta name="alpheios-param-sentenceNavigation" content="yes"/>
+    <meta name="alpheios-param-sequential" content="no"/>
+    <meta name="alpheios-param-local" content="supplied-sentence"/>
+
+    <!-- URL to call when exiting and label to use on exit button -->
+    <meta name="alpheios-exitURL" content="http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq"/>
+    <meta name="alpheios-exitLabel" content="Sentence&#160;list"/>
+  </head>
+  <body onload="Init(event)">
+    <div id="sentence-xml"></div>
+    <table style="border:none; padding:0; width:100%">
+      <tr>
+        <td style="vertical-align:top; text-align:right">
+          <div class="alpheios-ignore" id="alph-page-header">
+            <img src="http://repos1.alpheios.net/exist2/rest/db/image/alpheios.png" alt="Alpheios"/>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div id="tree-error"/>
+    <div id="tree-hint" class="alpheios-hint"/>
+    <svg xmlns="http://www.w3.org/2000/svg" id="dependency-tree"/>
+    <!-- Provide key here if buildContent param does not contain "key" -->
+    <div id="key"/>
+  </body>
+</html>

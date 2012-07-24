@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.github.com/balmas/tei-digital-age/master/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Greek Anthology, Volume V</title>
+                <title type="sub">Machine readable text</title>
+                <editor role="editor" n="Loeb">W. R. Paton</editor>
+                <funder>The National Endownment for the Humantities</funder>
+                <funder>Google Digital Humanities Awards Program</funder>
+                <sponsor>Perseus Project, Tufts University</sponsor>
+                <principal>Gregory Crane</principal>
+                <respStmt>
+                    <resp>Prepared under the supervision of</resp>
+                    <name>Lisa Cerrato</name>
+                    <name>Alison Babeu</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+                <authority>Perseus Project</authority>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl>
+                    <bibl>
+                        <title>The Greek Anthology</title>
+                        <respStmt>
+                            <resp>with an English Translation by</resp>
+                            <name>W. R. Paton</name>
+                        </respStmt>
+                        <pubPlace>London</pubPlace>
+                        <publisher>William Heinemann Ltd.</publisher>
+                        <date>1927</date>
+                        <biblScope type="volume">5</biblScope>
+                        <biblScope type="chapter">12</biblScope>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>optical character recognition</p>
+            <refsDecl>
+                <refState unit="book" delim="."/>
+                <refState unit="chapter" n="chunk"/>
+            </refsDecl>
+            <refsDecl>
+                <refState unit="edition" delim="."/>
+            </refsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="grc">Greek</language>
+                <language ident="lat">Latin</language>
+            </langUsage>
+        </profileDesc>            
+    </teiHeader>
+    <text n="urn:cts:greekLit:tlg7000.tlg001.perseus-grc1" xml:lang="grc">
+        <body>
+            <div type="book" n="13" org="uniform" sample="medial">
+                <div type="chapter" n="12" org="uniform" sample="complete">
+                    <div type="edition" n="urn:cts:greekLit:tlg1396.tlg001.perseus-grc1">
+                        <docAuthor xml:lang="lat">
+                            <name xml:lang="lat" key="tlg-1396" ref="http://en.wikipedia.org/wiki/Hegesippus_%28orator%29"><foreign xml:lang="lat">hegesippus</foreign></name>
+                        </docAuthor>
+                        <label>ἐπὶ ἑξαμέτρου τρίμετρον ἐπαδόμενον</label>
+                        <p>
+                            <lb n="1"/>ἐρρέτω ἦμαρ ἐκεῖνο, καὶ οὐλομένη σκοτόμαινα,
+                            <lb n="2"/>βρόμος τε δεινὸς ἠνεμωμένης ἁλός,
+                            <lb n="3"/>οἵ ποτε νῆ᾽ ἐκύλισαν, ἐφ᾽ ἧς ὁ τὰ πολλὰ μελίφρων
+                            <lb n="4"/> Ἀβδηρίων ἄπρηκτα θεοῖσιν εὔχετο:
+                            <lb n="5"/>ῥαίσθη γὰρ διὰ πάντα, προσηνέχθη δὲ κλύδωνι
+                            <lb n="6"/> τρηχεῖαν εἰς <name type="place" ref="http://pleiades.stoa.org/places/590044">Σέριφον</name>, αἰδοίων ὅθι
+                            <lb n="7"/>προξείνων ὑπὸ χερσὶ λαχὼν πυρός, ἵκετο πάτρην
+                            <lb n="8"/><name type="place" ref="http://pleiades.stoa.org/places/501323">Ἄβδηρα</name>, κρωσσῷ χαλκέῳ περισταλείς.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
