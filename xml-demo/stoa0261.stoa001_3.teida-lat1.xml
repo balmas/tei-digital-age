@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../tei-digital-age/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" n="sidon.poems_lat.xml">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" n="sidon.poems_lat.xml" xml:lang="lat">
     <teiHeader type="text">
         <fileDesc>
             <titleStmt>

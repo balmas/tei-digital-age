@@ -552,7 +552,7 @@
 						<Boolean>false</Boolean>
 					</field>
 					<field name="outputFile">
-						<File>../digitaledition/${cfn}.xml</File>
+						<File>../digitaledition/${cfn}.de.xml</File>
 					</field>
 					<field name="openOtherLocationInBrowser">
 						<Boolean>false</Boolean>
@@ -1091,15 +1091,15 @@
 											<String>translationFile</String>
 										</field>
 										<field name="prefix">
-											<String>teida</String>
+											<null/>
 										</field>
 										<field name="namespace">
-											<String></String>
+											<String>http://data.perseus.org/namespaces/teida</String>
 										</field>
 									</paramDescriptor>
 								</field>
 								<field name="value">
-									<String>tlg1396.tlg001.teida-eng1.de.xml</String>
+									<String>../../digitaledition/tlg1396.tlg001.teida-eng1.de.xml</String>
 								</field>
 								<field name="hasXPathValue">
 									<Boolean>false</Boolean>

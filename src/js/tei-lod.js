@@ -65,6 +65,7 @@
             $.ajax(url, { 
                  type: 'GET',  
                  dataType: "xml",
+                 isLocal: "true",
                  success: function(data) {
                      var jdata = $(data).contents().find('body').html();
                      $("#tei-syntax-frame").contents().find('body').html(jdata);

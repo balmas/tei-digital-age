@@ -555,6 +555,7 @@ then
     return        
         (: create copy of original text with fixed words :)
         element {QName("http://www.tei-c.org/ns/1.0","TEI")} {
+            $doc/tei:TEI/@*,
             local:print-nodes($marked-words/node(), $fix2)
         }
 else $marked-words
