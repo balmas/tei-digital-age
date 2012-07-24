@@ -1,8 +1,11 @@
 # tei-digital-age
 
 Digital Edition Demonstration and Sample Code 
+
 NEH Institute 2012 
+
 Working With Text In a Digital Age
+
 Tufts University
 
 ## Overview
@@ -22,13 +25,15 @@ Some specific items to be discussed through the work on digital edition include:
 ## Data
 
 We have selected 2 sample texts for the exercise, one Greek and one Latin. The Greek is a fragment of Hegesippus from the Greek Anthology and the Latin is a poem of Sidonius.  
+
 The data for the samples can be found in the src/data directory of the repository and contain the following for each text:
-1. links to catalog records for the text
-2. links to digital copies of the text and translation
-3. the work identifier
-4. the OCR of the bibliographic information
-5. the OCR of the source text (original and corrected)
-6. the OCR of the English translation (original and corrected)
+
+* links to catalog records for the text
+* links to digital copies of the text and translation
+* the work identifier
+* the OCR of the bibliographic information
+* the OCR of the source text (original and corrected)
+* the OCR of the English translation (original and corrected)
 
 
 ## Tools
@@ -57,7 +62,7 @@ The scripts which prepare the digital edition require the following specific app
 
 ## Preparing the Digital Edition
 
-1. clone the repository or download in a zip.
+1. clone this repository or download the zip file and extract to a local directory, preserving folders
 2. Select one of the two sample texts in the src/data directory (tlg1396.tlg001.data.txt for Greek or stoa0261.stoa001_3.data.txt for Latin)
 
 ##  Transcribe
@@ -90,7 +95,7 @@ the downloaded XML files into a single file in the xml directory of the demo env
 * Use the Alpheios Treebank Editor to align the translations.
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001 (Hegesippus)
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001 (Sidonius)
-NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use pre-prepared annotations for the integration demo.
+  * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use pre-prepared annotations for the integration demo.
 * Copy the pre-prepared treebank annotation for your text from the xml-demo to the xml directory:
   * tlg1396.tlg1000.teida-grc1.tb.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-lat1.tb.xml (Sidonius Text)
