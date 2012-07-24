@@ -10,10 +10,10 @@ Tufts University
 
 ## Overview
 
-The goal of this demo/sample code is to provide a platform which instituate participates can use to create a miniature digital edition.  We will use
-these editions to provide some concrete examples for discussion of decisions and issues to consider when creating the supporting TEI and related resources.
+The goal of this demo/sample code is to provide a platform which institute participants can use to complete an exercise to create a miniature digital edition.  We will use
+these editions as concrete examples for discussion of decisions and issues to consider when creating digital editions from TEI XML, annotations and other related resources.
 
-Some specific items to be discussed through the work on digital edition include:
+Some specific items for consideration and discussion through this exercise :
 
 * Creating identifiers for your texts.
 * Establishing markup guidelines. 
