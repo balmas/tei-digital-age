@@ -1,12 +1,8 @@
-# tei-digital-age
+# NEH Institute Working With Text In a Digital Age
 
 Digital Edition Demonstration and Sample Code 
-
-NEH Institute 2012 
-
-Working With Text In a Digital Age
-
 Tufts University
+July 2012
 
 ## Overview
 
@@ -19,9 +15,27 @@ Some specific items for consideration and discussion through this exercise :
 * Establishing markup guidelines. 
 * Metadata best practices.
 * Use of inline annotations versus standoff markup.
-* Applying Linked Data concepts.
+* OAC (Open Annotation Collaboration)
 * Leveraging annotation tools.
-* Distribution formats for display versus for enabling data reuse.
+* Applying Linked Data concepts.
+* Distribution formats: optimzing for display vs for enabling data reuse.
+
+## Resources
+
+The following resources may be helpful in understanding the exercise and/or working with digital editions:
+
+* [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
+* [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
+* [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
+* [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
+* [Alpheios Alignment Editor Screencast](http://alpheios.net/alpheios-demos/alignment/index.html)
+* [ISAW's awld.js library](http://isawnyu.github.com/awld-js/awld-test.html)
+* [Tufts Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
+* [Tufts FRBR Catalog Prototype](http://catalog.perseus.tufts.edu/perseus.org/)
+* [Pelagios](https://github.com/pelagios/pelagios-cookbook/wiki)
+* [Open Annotation Collaboration](http://www.openannotation.org/)
+* [CITE Architecture[(http://www.homermultitext.org/hmt-doc/cite/index.html)
+* [CTS Kit](http://homermultitext.blogspot.com/2012/07/html-cts-kit-abstract-announcing-for.html)
 
 ## Data
 
@@ -41,11 +55,11 @@ The data for the samples can be found in the src/data directory of the repositor
 
 ### Creation
 * oXygen for creating and editing the TEI and running transformations 
-* the Alpheios Alignment and Treebank editors to prepare alignment and syntactic annotations in standoff markup. (http://alpheios.net)
-* the Stylebear XSLT maker was used to customize the standard TEI to XHTML transformations provided by tei-c.org (http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
+* the Alpheios Alignment and Treebank editors to prepare alignment and syntactic annotations in standoff markup. 
+* the Stylebear XSLT maker was used to customize the standard TEI to XHTML transformations provided by tei-c.org 
 
 ### Display
-* ISAW's awld.js library for display of linked data resources (http://isawnyu.github.com/awld-js/awld-test.html)
+* ISAW's awld.js library for display of linked data resources 
 * Tufts Morphology Service + Alpheios Lexicon service for lemma lookup
 * Alpheios Treebank Viewer for Syntax
 
@@ -96,10 +110,10 @@ as child elements of the aligned-text root element (after the 2 language element
 * Use the Alpheios Treebank Editor to annotate the syntax.
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001 (Hegesippus)
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001 (Sidonius)
-  * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use pre-prepared annotations for the integration demo.
-* Copy the pre-prepared treebank annotation for your text from the xml-demo to the xml directory:
-  * tlg1396.tlg1000.teida-grc1.tb.xml (Hegesippus Text)
-  * stoa0261.stoa001_3.teida-lat1.tb.xml (Sidonius Text)
+  * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use 
+    the pre-prepared annotations for the integration demo which are already in the xml folder:
+   * tlg1396.tlg1000.teida-grc1.tb.xml (Hegesippus Text)
+   * stoa0261.stoa001_3.teida-lat1.tb.xml (Sidonius Text)
 
 ## Merge Standoff Markup with TEI to create Digital Editions
 
@@ -133,9 +147,9 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
   * digitaledition/tlg1396.tlg001.teida-grc1.de.html or digitaledition/tlg1396.tlg001.teida-grc1.de.html 
   * Note: the syntax viewer frame does not currently work properly in Chrome or Safari.
 
-## Discussion Points
-* Do we annotate meter inline or as standoff markup
+## Discussion 
+* Annotating meter inline vs standoff markup
   * Hegesippus poem demonstrates alternation of hexameters and iambic trimeters (lines 1, 3, 5, and 7 are hexameters)
-* Where do we put notes, commentary and apparatus?
+* Approaches to notes, commentary and apparatus
   * Sidonius notes were left out in the pre-prepared demo code, but should really be included
 * ...
