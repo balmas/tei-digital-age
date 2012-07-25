@@ -64,16 +64,14 @@ The scripts which prepare the digital edition require the following specific app
 2. Select one of the two sample texts from the src/data directory (tlg1396.tlg001.data.txt for Greek or stoa0261.stoa001_3.data.txt for Latin)
 
 ##  Transcribe
-* Create a new TEI XML file named according to the edition in the empty xml directory
-* to use the digital edition demo scripts with minimal hassle, adhere to the following naming schemes:
+* Create a new TEI XML file in the xml directory. Adhere to the following file naming scheme:
   * tlg1396.tlg1000.teida-grc1.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-lat1.xml (Sidonius Text)
-* add the markup for the text to the file
-* Create a new TEI XML file named according to the translation in the empty xml directory
-* to use the digital edition scripts with minimal hassle, adhere to the following naming schemes:
+* Add the TEI markup for the text to the file
+* Create a new TEI XML file in the xml directory. Adhere to the following naming scheme:
   * tlg1396.tlg1000.teida-eng1.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-eng1.xml (Sidonius Text)
-* add the markup for the translation to the file
+* Add the markup for the translation to the file
 
 ## Annotate
 
