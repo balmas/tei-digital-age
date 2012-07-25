@@ -129,9 +129,9 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
 * Open newly created digital edition xml
   * this the file created in the previous step, it should be in the digitaleditions directory and is either tlg1396.tlg001.teida-grc1.de.xml or stoa0261.stoa001_3.teida-grc1.de.xml
 * run transformtodisplay-greekDemo or transformtodisplay-latinDemo XSLT Transformation
-* load the resulting html file in your browser
+* load the resulting html file in your browser (Firefox is preferred)
   * digitaledition/tlg1396.tlg001.teida-grc1.de.html or digitaledition/tlg1396.tlg001.teida-grc1.de.html 
-
+  * Note: the syntax viewer frame does not currently work properly in Chrome or Safari.
 
 ## Discussion Points
 * Do we annotate meter inline or as standoff markup
