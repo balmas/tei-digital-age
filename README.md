@@ -65,9 +65,9 @@ The scripts which prepare the digital edition require the following specific app
 
 ##  Transcribe
 * Templates for the transcription TEI XML have been created for you in xml directory:
-  * tlg1396.tlg1000.teida-grc1.xml (Hegesippus Text - Greek Transcription)
+  * tlg1396.tlg001.teida-grc1.xml (Hegesippus Text - Greek Transcription)
   * stoa0261.stoa001_3.teida-lat1.xml (Sidonius Text - Latin Transcription)
-  * tlg1396.tlg1000.teida-eng1.xml (Hegesippus Text - English Translation)
+  * tlg1396.tlg001.teida-eng1.xml (Hegesippus Text - English Translation)
   * stoa0261.stoa001_3.teida-eng1.xml (Sidonius Text - English Translation)
 * The file header metadata and basic document structure for the text are already populated. You need to add the markup of the text so that the file validates according to the schema.  Some things to consider identifying in the markup are:
  * poetic lines (if applicable)
@@ -85,7 +85,7 @@ The scripts which prepare the digital edition require the following specific app
 * After aligning the translation, click the Export XML button to download your alignment.  Do this for as many of the sentences as you want to annotate, and then combine 
 the downloaded XML files into a single file in the xml directory of the demo environment by inserting the &lt;sentence&gt; elements from the downloaded alignments into the template file for that text in the xml directory 
 as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;language&gt; elements). The template files are:
-  * tlg1396.tlg1000.teida-grc1.teida-eng1.xml (Hegesippus Text)
+  * tlg1396.tlg001.teida-grc1.teida-eng1.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-lat1.teida-eng1.xml (Sidonius Text)
 
 ### Annotate Syntax
@@ -95,7 +95,7 @@ as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;lang
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001 (Sidonius)
   * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use 
     the pre-prepared annotations for the integration demo which are already in the xml folder:
-   * tlg1396.tlg1000.teida-grc1.tb.xml (Hegesippus Text)
+   * tlg1396.tlg001.teida-grc1.tb.xml (Hegesippus Text)
    * stoa0261.stoa001_3.teida-lat1.tb.xml (Sidonius Text)
 
 ## Merge Standoff Markup with TEI to create Digital Editions
