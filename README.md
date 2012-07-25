@@ -22,24 +22,24 @@ Some specific items for consideration and discussion through this exercise :
 
 ## Resources
 
-The following resources may be helpful in understanding the exercise and/or working with digital editions:
+The following resources may be helpful in understanding the exercise and for working with digital editions:
 
 * [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
 * [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
 * [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
 * [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
 * [Alpheios Alignment Editor Screencast](http://alpheios.net/alpheios-demos/alignment/index.html)
-* [ISAW's awld.js library](http://isawnyu.github.com/awld-js/awld-test.html)
-* [Tufts Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
+* [ISAW's awld.js library](http://isawnyu.github.com/awld-js/)
+* [Tufts/Bamboo Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
 * [Tufts FRBR Catalog Prototype](http://catalog.perseus.tufts.edu/perseus.org/)
 * [Pelagios](https://github.com/pelagios/pelagios-cookbook/wiki)
 * [Open Annotation Collaboration](http://www.openannotation.org/)
-* [CITE Architecture[(http://www.homermultitext.org/hmt-doc/cite/index.html)
+* [CITE Architecture](http://www.homermultitext.org/hmt-doc/cite/index.html)
 * [CTS Kit](http://homermultitext.blogspot.com/2012/07/html-cts-kit-abstract-announcing-for.html)
 
 ## Data
 
-We have selected 2 sample texts for the exercise, one Greek and one Latin. The Greek is a fragment of Hegesippus from the Greek Anthology and the Latin is a poem of Sidonius.  
+We have selected two sample texts for the exercise, one Greek and one Latin. The Greek is a fragment of Hegesippus from the Greek Anthology and the Latin is a poem of Sidonius.  
 
 The data for the samples can be found in the src/data directory of the repository and contain the following for each text:
 
@@ -65,20 +65,20 @@ The data for the samples can be found in the src/data directory of the repositor
 
 ## Markup Guidelines
 
-We are using the TEI-Analytics subset of TEI P5. This schema is in the src/schemas directory.  
+We are using the [TEI-Analytics](http://segonku.unl.edu/teianalytics/TEIAnalytics.html) subset of TEI P5. This schema is in the src/schemas directory.  
 
 The scripts which prepare the digital edition require the following specific applications of this standard:
 
 * TEI element must contain an @xml:lang attribute for the main language of the text. Use 3 character language codes (grc, lat or eng)
-* Named entities should be identified using the <name/> element, using the ref attribute to point to a URI for the named entity.
-  * If you specify a URI reference for a named entity which is among those supported by awld.js good things will happen in your display.
+* Named entities should be identified using the &lt;name/&gt; element, using the @ref attribute to point to a URI for the named entity.
+  * If you specify a URI reference for a named entity which is among those supported by awld.js the display will automatically include that resource.
 * Citations should be identified using a quote tag inside a cit tag.  
-  * If you specify a valid CTS URN from the Perseus repository as the value of the @n attribute on your quote tag, good things may happen in your display.
+  * If you specify a valid CTS URN from the Perseus repository as the value of the @n attribute on your quote tag, the display will automatically include that resource.
 
 ## Preparing the Digital Edition
 
 1. clone this repository or download the zip file and extract to a local directory, preserving folders
-2. Select one of the two sample texts in the src/data directory (tlg1396.tlg001.data.txt for Greek or stoa0261.stoa001_3.data.txt for Latin)
+2. Select one of the two sample texts from the src/data directory (tlg1396.tlg001.data.txt for Greek or stoa0261.stoa001_3.data.txt for Latin)
 
 ##  Transcribe
 * Create a new TEI XML file named according to the edition in the empty xml directory
@@ -100,8 +100,8 @@ The scripts which prepare the digital edition require the following specific app
   * http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=tlg1396.tlg001.align (Hegesippus)
   * http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=stoa0261.stoa001.align (Sidonius)
 * After aligning the translation, click the Export XML button to download your alignment.  Do this for as many of the sentences as you want to annotate, and then combine 
-the downloaded XML files into a single file in the xml directory of the demo environment by inserting the sentence elements from the downloaded alignments into the template file for that text in the xml directory.
-as child elements of the aligned-text root element (after the 2 language elements). The template files are:
+the downloaded XML files into a single file in the xml directory of the demo environment by inserting the &lt;sentence&gt; elements from the downloaded alignments into the template file for that text in the xml directory 
+as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;language&gt; elements). The template files are:
   * tlg1396.tlg1000.teida-grc1.teida-eng1.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-lat1.teida-eng1.xml (Sidonius Text)
 
@@ -125,21 +125,18 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
   * xml is in the xml folder (or for the pre-prepared demo xml, it's in xml-demo)
   * Greek source is tlg1396.tlg001.teida-grc1.xml
   * Latin source is stoa0261.stoa001_3.teida-lat1.xml
-* run alignannotations-greekDemo or alignannotations-latinDemo Xquery transformation
+* run alignannotations-greekDemo or alignannotations-latinDemo XQuery transformation
   * Document, Transformation, Configure Transformation Scenario
   * Select XML Transformation With XQuery transformation type
   * Select alignannotations-greekDemo (or alignannotations-latinDemo)
-  * Make sure oXygen is set to output results as a file
-   * click Edit
-   * click Output tab
-   * make sure Evaluate as sequence is unchecked
+  * Make sure oXygen is set to output results as a file (click Edit, Output tab and make sure Evaluate as Sequence is unchecked)
 * Click Transform Now
 * Open translated xml
   * xml is in the xml folder
   * Greek translation is tlg1396.tlg001.teida-eng1.xml
   * Latin translation is stoa0261.stoa001_3.teida-eng1.xml
 * run reversealignannotations-greekDemo or reversealignannotations-latinDemo XQuery transformation
-  * See instructions under step 3
+  * Same instructions as above for alignannotations-greekDemo/alignannotations-latinDemo
 * Open newly created digital edition xml
   * this the file created in the previous step, it should be in the digitaleditions directory and is either tlg1396.tlg001.teida-grc1.de.xml or stoa0261.stoa001_3.teida-grc1.de.xml
 * run transformtodisplay-greekDemo or transformtodisplay-latinDemo XSLT Transformation
