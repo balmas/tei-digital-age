@@ -12,8 +12,7 @@ these editions as concrete examples for discussion of decisions and issues to co
 Some specific items for consideration and discussion through this exercise :
 
 * Creating identifiers for your texts.
-* Establishing markup guidelines. 
-* Metadata best practices.
+* Establishing markup guidelines and best practices.
 * Use of inline annotations versus standoff markup.
 * Dealing with overlapping hierarchies.
 * OAC (Open Annotation Collaboration)
@@ -92,8 +91,8 @@ The scripts which prepare the digital edition require the following specific app
 * Repeat for as many of the sentences as you want to annotate
 * Combine the downloaded XML files into a single file in the xml directory of the demo environment by inserting the &lt;sentence&gt; elements from the downloaded alignments into the template file for that text in the xml directory 
 as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;language&gt; elements). The template files are:
-  * tlg1396.tlg001.teida-grc1.teida-eng1.xml (Hegesippus Text)
-  * stoa0261.stoa001_3.teida-lat1.teida-eng1.xml (Sidonius Text)
+  * tlg1396.tlg001.teida-grc1.teida-eng1.align.xml (Hegesippus Text)
+  * stoa0261.stoa001_3.teida-lat1.teida-eng1.align.xml (Sidonius Text)
 
 ### Annotate Syntax
 
@@ -145,18 +144,16 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
 
 The following resources may be helpful in understanding the exercise and for working with digital editions:
 
+* [CITE Architecture](http://www.homermultitext.org/hmt-doc/cite/index.html)
 * [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
 * [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
 * [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
 * [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
 * [Alpheios Alignment Editor Screencast](http://alpheios.net/alpheios-demos/alignment/index.html)
 * [ISAW's awld.js library](http://isawnyu.github.com/awld-js/)
-* [Tufts/Bamboo Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
-* [Tufts FRBR Catalog Prototype](http://catalog.perseus.tufts.edu/perseus.org/)
-* [Pelagios](https://github.com/pelagios/pelagios-cookbook/wiki)
 * [Open Annotation Collaboration](http://www.openannotation.org/)
-* [CITE Architecture](http://www.homermultitext.org/hmt-doc/cite/index.html)
-* [CTS Kit](http://homermultitext.blogspot.com/2012/07/html-cts-kit-abstract-announcing-for.html)
+* [Tufts/Bamboo Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
+
 
 
 Created for the NEH Institute for Advanced Technology in the Digital Humanities by Bridget Almas, The Perseus Project, Tufts University July 2012
