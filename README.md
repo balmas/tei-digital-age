@@ -1,8 +1,8 @@
 # NEH Institute Working With Text In a Digital Age
 
 Digital Edition Demonstration and Sample Code 
-Tufts University
-July 2012
+
+Tufts University, July 2012
 
 ## Overview
 
@@ -19,23 +19,6 @@ Some specific items for consideration and discussion through this exercise :
 * Leveraging annotation tools.
 * Applying Linked Data concepts.
 * Distribution formats: optimzing for display vs for enabling data reuse.
-
-## Resources
-
-The following resources may be helpful in understanding the exercise and for working with digital editions:
-
-* [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
-* [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
-* [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
-* [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
-* [Alpheios Alignment Editor Screencast](http://alpheios.net/alpheios-demos/alignment/index.html)
-* [ISAW's awld.js library](http://isawnyu.github.com/awld-js/)
-* [Tufts/Bamboo Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
-* [Tufts FRBR Catalog Prototype](http://catalog.perseus.tufts.edu/perseus.org/)
-* [Pelagios](https://github.com/pelagios/pelagios-cookbook/wiki)
-* [Open Annotation Collaboration](http://www.openannotation.org/)
-* [CITE Architecture](http://www.homermultitext.org/hmt-doc/cite/index.html)
-* [CTS Kit](http://homermultitext.blogspot.com/2012/07/html-cts-kit-abstract-announcing-for.html)
 
 ## Data
 
@@ -69,15 +52,15 @@ We are using the [TEI-Analytics](http://segonku.unl.edu/teianalytics/TEIAnalytic
 
 The scripts which prepare the digital edition require the following specific applications of this standard:
 
-* TEI element must contain an @xml:lang attribute for the main language of the text. Use 3 character language codes (grc, lat or eng)
-* Named entities should be identified using the &lt;name/&gt; element, using the @ref attribute to point to a URI for the named entity.
+* TEI element must contain an 'xml:lang' attribute for the main language of the text. Use 3 character language codes (grc, lat or eng)
+* Named entities should be identified using the &lt;name/&gt; element, using the 'ref' attribute to point to a URI for the named entity.
   * If you specify a URI reference for a named entity which is among those supported by awld.js the display will automatically include that resource.
 * Citations should be identified using a quote tag inside a cit tag.  
-  * If you specify a valid CTS URN from the Perseus repository as the value of the @n attribute on your quote tag, the display will automatically include that resource.
+  * If you specify a valid CTS URN from the Perseus repository as the value of the 'n' attribute on your quote tag, the display will automatically include that resource.
 
 ## Preparing the Digital Edition
 
-1. clone this repository or download the zip file and extract to a local directory, preserving folders
+1. Download and extract [the zip file](https://github.com/balmas/tei-digital-age/zipball/master) to a local directory, preserving folders; or clone [the project github repository](https://github.com/balmas/tei-digital-age) using Git.
 2. Select one of the two sample texts from the src/data directory (tlg1396.tlg001.data.txt for Greek or stoa0261.stoa001_3.data.txt for Latin)
 
 ##  Transcribe
@@ -150,3 +133,31 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
 * Approaches to notes, commentary and apparatus
   * Sidonius notes were left out in the pre-prepared demo code, but should really be included
 * ...
+
+## Resources
+
+The following resources may be helpful in understanding the exercise and for working with digital editions:
+
+* [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
+* [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
+* [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
+* [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
+* [Alpheios Alignment Editor Screencast](http://alpheios.net/alpheios-demos/alignment/index.html)
+* [ISAW's awld.js library](http://isawnyu.github.com/awld-js/)
+* [Tufts/Bamboo Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
+* [Tufts FRBR Catalog Prototype](http://catalog.perseus.tufts.edu/perseus.org/)
+* [Pelagios](https://github.com/pelagios/pelagios-cookbook/wiki)
+* [Open Annotation Collaboration](http://www.openannotation.org/)
+* [CITE Architecture](http://www.homermultitext.org/hmt-doc/cite/index.html)
+* [CTS Kit](http://homermultitext.blogspot.com/2012/07/html-cts-kit-abstract-announcing-for.html)
+
+
+Created for the NEH Institute for Advanced Technology in the Digital Humanities by Bridget Almas, The Perseus Project, Tufts University July 2012
+
+This free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](http://www.gnu.org/licenses/) as published by the Free Software Foundation, 
+either version 3 of the License, or (at your option) any later version.
+
+This  software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+See http://www.gnu.org/licenses/.
