@@ -110,11 +110,13 @@ A set of pre-prepared transformation scenarios can be used to transform the TEI 
 on the pre-prepared demo XML files in the xml-demo directory, or ones you prepare and put in the xml directory as described above.
 * Import the transformations from the scenarios.xml file
   * Options, Import Global Options and select scenarios.xml
+  * This will load the XQuery and XSLT transformation scenarios listed below into your oXygen environment
+    * The scenarios configure parameter values as input to the alignannotations.xquery and teiDriver.xsl files
 * Open the transcription xml
   * xml is in the xml folder (or for the pre-prepared demo xml, it's in xml-demo)
   * Greek source is tlg1396.tlg001.teida-grc1.xml
   * Latin source is stoa0261.stoa001_3.teida-lat1.xml
-* run alignannotations-greekDemo or alignannotations-latinDemo XQuery transformation
+* run alignannotations-greekDemo or alignannotations-latinDemo XQuery transformation scenario
   * Document, Transformation, Configure Transformation Scenario
   * Select XML Transformation With XQuery transformation type
   * Select alignannotations-greekDemo (or alignannotations-latinDemo)
@@ -124,11 +126,11 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
   * xml is in the xml folder
   * Greek translation is tlg1396.tlg001.teida-eng1.xml
   * Latin translation is stoa0261.stoa001_3.teida-eng1.xml
-* run reversealignannotations-greekDemo or reversealignannotations-latinDemo XQuery transformation
+* run reversealignannotations-greekDemo or reversealignannotations-latinDemo XQuery transformation scenario
   * Same instructions as above for alignannotations-greekDemo/alignannotations-latinDemo
 * Open newly created digital edition xml
   * this the file created in the previous step, it should be in the digitaleditions directory and is either tlg1396.tlg001.teida-grc1.de.xml or stoa0261.stoa001_3.teida-grc1.de.xml
-* run transformtodisplay-greekDemo or transformtodisplay-latinDemo XSLT Transformation
+* run transformtodisplay-greekDemo or transformtodisplay-latinDemo XSLT Transformation scenario
 * load the resulting html file in your browser (Firefox is preferred)
   * digitaledition/tlg1396.tlg001.teida-grc1.de.html or digitaledition/tlg1396.tlg001.teida-grc1.de.html 
   * Note: the syntax viewer frame does not currently work properly in Chrome or Safari.
