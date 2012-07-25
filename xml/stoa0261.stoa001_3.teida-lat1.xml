@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../tei-digital-age/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" n="sidon.poems_lat.xml" xml:lang="lat">
+    <teiHeader type="text">
+        <fileDesc>
+            <titleStmt>
+                <title>Carmina</title>
+                <author>Sidonius Apollinaris</author>
+                <editor role="editor">W.B. Anderson</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+            </publicationStmt>
+            <sourceDesc default="false">
+                <bibl default="false">
+                    <title>Sidonius Poems and Letters, Vol 1</title>
+                    <author>Sidonius Apollinaris</author>
+                    <editor role="editor">W.B. Anderson</editor>
+                    <publisher>William Heinemann Ltd.; Harvard University Press</publisher>
+                    <pubPlace>London; Cambridge, Massachusetts</pubPlace>
+                    <date>1936</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <refsDecl>
+                <refState unit="book"/>
+                <refState unit="poem" delim="."/>
+            </refsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="lat">Latin</language>
+            </langUsage>
+        </profileDesc>            
+    </teiHeader>
+    <text type="edition" n="urn:cts:latinLang:stoa0261.stoa001.teida-lat1" xml:lang="lat">
+        <body>
+            <div type="book" n="1"  sample="medial">
+                <div type="poem" n="3" org="uniform" sample="complete" part="N">
+                        III
+                        AD LIBELLVM
+                        Quid faceret laetas segetes, quod tempus amandum
+                        messibus et gregibus, vitibus atque apibus, ad Maecenatis quondam sunt edita nomen;
+                        hinc, Maro, post audes arma virumque loqui, at mihi Petrus erit Maecenas temporis huius; 
+                        nam famae pelagus sidere curro suo. si probat, emittit, si damnat carmina, celat,
+                        nec nos ronchisono rhinocerote notat. i, liber: hic nostrum tutatur, crede, pudorem;
+                        hoc censore etiam displicuisse placet. 
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
+

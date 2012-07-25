@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../tei-digital-age/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" n="sidon.poems_lat.xml">
+    <teiHeader type="text">
+        <fileDesc>
+            <titleStmt>
+                <title>Carmina</title>
+                <author>Sidonius Apollinaris</author>
+                <editor role="editor">W.B. Anderson</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+            </publicationStmt>
+            <sourceDesc default="false">
+                <bibl default="false">
+                    <title>Sidonius Poems and Letters, Vol 1</title>
+                    <author>Sidonius Apollinaris</author>
+                    <editor role="editor">W.B. Anderson</editor>
+                    <publisher>William Heinemann Ltd.; Harvard University Press</publisher>
+                    <pubPlace>London; Cambridge, Massachusetts</pubPlace>
+                    <date>1936</date>
+                </bibl>
+                
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <refsDecl>
+                <refState unit="book" delim="."/>
+                <refState unit="poem" delim="."/>
+            </refsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="lat">Latin</language>
+            </langUsage>
+        </profileDesc>            
+    </teiHeader>
+    <text type="translation" n="urn:cts:latinLang:stoa0261.stoa001.teida-lat1">
+        <body>
+                <div type="book" n="1"  sample="medial">
+                    <div type="poem" n="3" sample="complete" part="N">          
+                        
+                        TO HIS LITTLE BOOK 
+                        
+                        What made the cornfields joyous, what season 
+                        is dear to harvest-crops and flocks, to vines and 
+                        bees,* was once declared in a poem addressed to 
+                        Maecenas ; thereafter, Maro, thou didst dare to 
+                        sing of " arms and the man." But to me Petrus ^ 
+                        shall be the Maecenas of this time; for I glide 
+                        over the sea of fame under his guiding star. If he 
+                        approves my poems he lets them go forth, if he 
+                        condemns them, he suppresses them, but he never 
+                        censures me with the snorting snout of a rhinoceros. 
+                        Go, then, my book ; for believe me, he sustains my 
+                        bashfulness ; with him for censor it is a pleasure 
+                        even to have displeased. 
+                            
+                        </div>
+                    </div>
+        </body>
+    </text>
+</TEI>
+
