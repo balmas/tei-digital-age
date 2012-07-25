@@ -1,99 +1,99 @@
-<treebank xmlns="http://nlp.perseus.tufts.edu/syntax/treebank/1.5" xml:lang="lat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nlp.perseus.tufts.edu/syntax/treebank/1.5 treebank-1.5.xsd" version="1.5" format="aldt">
-  <sentence id="1" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="Quid" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="faceret" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="laetas" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form="segetes" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="5" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="6" form="quod" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="7" form="tempus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="8" form="amandum" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="9" form="messibus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="10" form="et" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="11" form="gregibus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="12" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="13" form="vitibus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="14" form="atque" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="15" form="apibus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="16" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="17" form="ad" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="18" form="Maecenatis" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="19" form="quondam" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="20" form="sunt" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="21" form="edita" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="22" form="nomen" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="23" form=";" postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
-  <sentence id="2" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="hinc" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="Maro" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="5" form="post" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="6" form="audes" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="7" form="arma" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="8" form="virumque" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="9" form="loqui" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="10" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="11" form="at" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="12" form="mihi" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="13" form="Petrus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="14" form="erit" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="15" form="Maecenas" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="16" form="temporis" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="17" form="huius" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="18" form=";" postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
-  <sentence id="3" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="nam" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="famae" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="pelagus" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form="sidere" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="5" form="curro" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="6" form="suo" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="7" form="." postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
-  <sentence id="4" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="si" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="probat" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form="emittit" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="5" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="6" form="si" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="7" form="damnat" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="8" form="carmina" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="9" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="10" form="celat" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="11" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="12" form="nec" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="13" form="nos" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="14" form="ronchisono" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="15" form="rhinocerote" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="16" form="notat" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="17" form="." postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
-  <sentence id="5" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="i" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="liber" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form=":" postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
-  <sentence id="6" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="hic" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="nostrum" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="tutatur" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="5" form="crede" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="6" form="," postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="7" form="pudorem" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="8" form=";" postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
-  <sentence id="7" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
-    <word id="1" form="hoc" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="2" form="censore" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="3" form="etiam" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="4" form="displicuisse" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="5" form="placet" postag="----------" head="0" lemma="" relation="nil"/>
-    <word id="6" form="." postag="----------" head="0" lemma="" relation="nil"/>
-  </sentence>
+<treebank xmlns="http://nlp.perseus.tufts.edu/syntax/treebank/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="lat" xsi:schemaLocation="http://nlp.perseus.tufts.edu/syntax/treebank/1.5 treebank-1.5.xsd" version="1.5" format="aldt">
+    <sentence id="1" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="Quid" postag="----------" lemma="" head="2" relation="SBJ"/>
+        <word id="2" form="faceret" postag="----------" lemma="" head="5" relation="SBJ_CO"/>
+        <word id="3" form="laetas" postag="----------" lemma="" head="2" relation="OCOMP"/>
+        <word id="4" form="segetes" postag="----------" lemma="" head="2" relation="OBJ"/>
+        <word id="5" form="," postag="----------" lemma="" head="21" relation="COORD"/>
+        <word id="6" form="quod" postag="----------" lemma="" head="7" relation="ATR"/>
+        <word id="7" form="tempus" postag="----------" lemma="" head="8" relation="SBJ"/>
+        <word id="8" form="amandum" postag="----------" lemma="" head="5" relation="SBJ_CO"/>
+        <word id="9" form="messibus" postag="----------" lemma="" head="10" relation="OBJ_CO"/>
+        <word id="10" form="et" postag="----------" lemma="" head="12" relation="COORD_CO"/>
+        <word id="11" form="gregibus" postag="----------" lemma="" head="10" relation="OBJ_CO"/>
+        <word id="12" form="," postag="----------" lemma="" head="8" relation="COORD"/>
+        <word id="13" form="vitibus" postag="----------" lemma="" head="14" relation="OBJ_CO"/>
+        <word id="14" form="atque" postag="----------" lemma="" head="12" relation="COORD_CO"/>
+        <word id="15" form="apibus" postag="----------" lemma="" head="14" relation="OBJ_CO"/>
+        <word id="16" form="," postag="----------" lemma="" head="8" relation="AuxX"/>
+        <word id="17" form="ad" postag="----------" lemma="" head="21" relation="AuxP"/>
+        <word id="18" form="Maecenatis" postag="----------" lemma="" head="22" relation="ATR"/>
+        <word id="19" form="quondam" postag="----------" lemma="" head="21" relation="ADV"/>
+        <word id="20" form="sunt" postag="----------" lemma="" head="21" relation="AuxV"/>
+        <word id="21" form="edita" postag="----------" lemma="" head="0" relation="PRED"/>
+        <word id="22" form="nomen" postag="----------" lemma="" head="17" relation="ADV"/>
+        <word id="23" form=";" postag="----------" lemma="" head="0" relation="AuxK"/>
+    </sentence>
+    <sentence id="2" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="hinc" postag="----------" lemma="" head="5" relation="ADV"/>
+        <word id="2" form="," postag="----------" lemma="" head="3" relation="AuxX"/>
+        <word id="3" form="Maro" postag="----------" lemma="" head="6" relation="ExD"/>
+        <word id="4" form="," postag="----------" lemma="" head="3" relation="AuxX"/>
+        <word id="5" form="post" postag="----------" lemma="" head="6" relation="AuxP"/>
+        <word id="6" form="audes" postag="----------" lemma="" head="11" relation="PRED_CO"/>
+        <word id="7" form="arma" postag="----------" lemma="" head="9" relation=""/>
+        <word id="8" form="virumque" postag="----------" lemma="" head="9" relation=""/>
+        <word id="9" form="loqui" postag="----------" lemma="" head="6" relation=""/>
+        <word id="10" form="," postag="----------" lemma="" head="11" relation="AuxX"/>
+        <word id="11" form="at" postag="----------" lemma="" head="0" relation="COORD"/>
+        <word id="12" form="mihi" postag="----------" lemma="" head="14" relation="OBJ"/>
+        <word id="13" form="Petrus" postag="----------" lemma="" head="14" relation="SBJ"/>
+        <word id="14" form="erit" postag="----------" lemma="" head="11" relation="PRED_CO"/>
+        <word id="15" form="Maecenas" postag="----------" lemma="" head="14" relation="PNOM"/>
+        <word id="16" form="temporis" postag="----------" lemma="" head="15" relation="ATR"/>
+        <word id="17" form="huius" postag="----------" lemma="" head="16" relation="ATR"/>
+        <word id="18" form=";" postag="----------" lemma="" head="0" relation=""/>
+    </sentence>
+    <sentence id="3" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="nam" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="2" form="famae" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="3" form="pelagus" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="4" form="sidere" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="5" form="curro" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="6" form="suo" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="7" form="." postag="----------" head="0" lemma="" relation="nil"/>
+    </sentence>
+    <sentence id="4" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="si" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="2" form="probat" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="3" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="4" form="emittit" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="5" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="6" form="si" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="7" form="damnat" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="8" form="carmina" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="9" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="10" form="celat" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="11" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="12" form="nec" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="13" form="nos" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="14" form="ronchisono" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="15" form="rhinocerote" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="16" form="notat" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="17" form="." postag="----------" head="0" lemma="" relation="nil"/>
+    </sentence>
+    <sentence id="5" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="i" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="2" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="3" form="liber" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="4" form=":" postag="----------" head="0" lemma="" relation="nil"/>
+    </sentence>
+    <sentence id="6" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="hic" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="2" form="nostrum" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="3" form="tutatur" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="4" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="5" form="crede" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="6" form="," postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="7" form="pudorem" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="8" form=";" postag="----------" head="0" lemma="" relation="nil"/>
+    </sentence>
+    <sentence id="7" document_id="urn:cts:latinLang:stoa0261.stoa001" subdoc="3" span="">
+        <word id="1" form="hoc" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="2" form="censore" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="3" form="etiam" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="4" form="displicuisse" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="5" form="placet" postag="----------" head="0" lemma="" relation="nil"/>
+        <word id="6" form="." postag="----------" head="0" lemma="" relation="nil"/>
+    </sentence>
 </treebank>
