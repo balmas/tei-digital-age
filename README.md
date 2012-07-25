@@ -97,9 +97,9 @@ as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;lang
 ### Annotate Syntax
 
 * Use the Alpheios Treebank Editor to annotate the syntax.
-  * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001 (Hegesippus)
-  * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001 (Sidonius)
-  * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use 
+  * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001.teida-grc1-ro (Hegesippus)
+  * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001.teida-lat1-ro (Sidonius)
+  * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations - these are read-only copies.  We will use 
     the pre-prepared annotations for the integration demo which are already in the xml folder:
    * tlg1396.tlg001.teida-grc1.tb.xml (Hegesippus Text)
    * stoa0261.stoa001_3.teida-lat1.tb.xml (Sidonius Text)
