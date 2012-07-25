@@ -15,6 +15,7 @@ Some specific items for consideration and discussion through this exercise :
 * Establishing markup guidelines. 
 * Metadata best practices.
 * Use of inline annotations versus standoff markup.
+* Dealing with overlapping hierarchies.
 * OAC (Open Annotation Collaboration)
 * Leveraging annotation tools.
 * Applying Linked Data concepts.
@@ -85,8 +86,11 @@ The scripts which prepare the digital edition require the following specific app
 * Use the Alpheios Alignment Editor to align the translations.
   * http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=tlg1396.tlg001.align (Hegesippus)
   * http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=stoa0261.stoa001.align (Sidonius)
-* After aligning the translation, click the Export XML button to download your alignment.  Do this for as many of the sentences as you want to annotate, and then combine 
-the downloaded XML files into a single file in the xml directory of the demo environment by inserting the &lt;sentence&gt; elements from the downloaded alignments into the template file for that text in the xml directory 
+* Select a sentence to align the individual words in the sentence.
+* After aligning the sentence, export your work for inclusion in your digital edition:
+  * click the Export XML button and save in a local directory.
+* Repeat for as many of the sentences as you want to annotate
+* Combine the downloaded XML files into a single file in the xml directory of the demo environment by inserting the &lt;sentence&gt; elements from the downloaded alignments into the template file for that text in the xml directory 
 as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;language&gt; elements). The template files are:
   * tlg1396.tlg001.teida-grc1.teida-eng1.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-lat1.teida-eng1.xml (Sidonius Text)
