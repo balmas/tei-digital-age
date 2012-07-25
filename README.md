@@ -61,19 +61,22 @@ The scripts which prepare the digital edition require the following specific app
 ## Preparing the Digital Edition
 
 1. Download and extract [the zip file](https://github.com/balmas/tei-digital-age/zipball/master) to a local directory, preserving folders; or clone [the project github repository](https://github.com/balmas/tei-digital-age) using Git.
-2. Select one of the two sample texts from the src/data directory (tlg1396.tlg001.data.txt for Greek or stoa0261.stoa001_3.data.txt for Latin)
+2. Select one of the two sample texts to work with, either the Hegesippus or the Sidonius. Each has a transcription and a translation you will be working with. 
 
 ##  Transcribe
-* Templates for the transcription TEI XML have been created for you in xml directory:
+* Templates for the transcription TEI XML have been created for you in xml directory. 
   * tlg1396.tlg001.teida-grc1.xml (Hegesippus Text - Greek Transcription)
   * stoa0261.stoa001_3.teida-lat1.xml (Sidonius Text - Latin Transcription)
   * tlg1396.tlg001.teida-eng1.xml (Hegesippus Text - English Translation)
   * stoa0261.stoa001_3.teida-eng1.xml (Sidonius Text - English Translation)
+  
 * The file header metadata and basic document structure for the text are already populated. You need to add the markup of the text so that the file validates according to the schema.  Some things to consider identifying in the markup are:
  * poetic lines (if applicable)
  * named entities
  * meter
  * quotations and citations
+
+(Note: the source data from which the templates were created can be found in the src/data directory.)
 
 ## Annotate
 
