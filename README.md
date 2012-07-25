@@ -17,6 +17,7 @@ Some specific items for consideration and discussion through this exercise :
 
 * Creating identifiers for your texts.
 * Establishing markup guidelines. 
+* Metadata best practices.
 * Use of inline annotations versus standoff markup.
 * Applying Linked Data concepts.
 * Leveraging annotation tools.
@@ -85,14 +86,14 @@ The scripts which prepare the digital edition require the following specific app
   * http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=tlg1396.tlg001.align (Hegesippus)
   * http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=stoa0261.stoa001.align (Sidonius)
 * After aligning the translation, click the Export XML button to download your alignment.  Do this for as many of the sentences as you want to annotate, and then combine 
-the downloaded XML files into a single file in the xml directory of the demo environment by copying the sentence elements from the n+1 sentences into the file of the first sentence's file (as siblings to sentence). 
-* To use the digital edition demo scripts with minimal hassle, adhere to the following naming schemes:
+the downloaded XML files into a single file in the xml directory of the demo environment by inserting the sentence elements from the downloaded alignments into the template file for that text in the xml directory.
+as child elements of the aligned-text root element (after the 2 language elements). The template files are:
   * tlg1396.tlg1000.teida-grc1.teida-eng1.xml (Hegesippus Text)
   * stoa0261.stoa001_3.teida-lat1.teida-eng1.xml (Sidonius Text)
 
 ### Annotate Syntax
 
-* Use the Alpheios Treebank Editor to align the translations.
+* Use the Alpheios Treebank Editor to annotate the syntax.
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001 (Hegesippus)
   * http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001 (Sidonius)
   * NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations.  We will use pre-prepared annotations for the integration demo.
