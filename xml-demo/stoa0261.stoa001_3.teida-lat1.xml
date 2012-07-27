@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../tei-digital-age/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.github.com/balmas/tei-digital-age/master/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" n="sidon.poems_lat.xml" xml:lang="lat">
     <teiHeader type="text">
         <fileDesc>
@@ -42,7 +42,7 @@
                 <div type="poem" n="3" org="uniform" sample="complete" part="N">
                     <head>ad libellum </head>
                     <p>
-                        <lb n="1"/>Quid faceret laetas segetes, quod tempus amandum
+                        <lb n="1"/>Quid faceret laetas segetes, quod tempus amandum                       
                         <lb n="2"/>messibus et gregibus, vitibus atque apibus,
                         <lb n="3"/>ad Maecenatis quondam sunt edita nomen;
                         <lb n="4"/>hinc, Maro, post audes <cit><quote n="urn:cts:latinLang:phi0690.phi003:1.1">arma virumque</quote></cit> loqui,
