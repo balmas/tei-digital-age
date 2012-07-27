@@ -150,14 +150,19 @@ The following resources may be helpful in understanding the exercise and for wor
 * [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
 * [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
 * [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
-* [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
+* [Perseus Treebanking](http://nlp.perseus.tufts.edu/syntax)
+  * [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
   * [Treebank Tool](http://repos1.alpheios.net/exist/rest/db/app/treebank-entertext.xhtml)
   * [Treebank Guidelines](http://treebank.alpheios.net/)
+  * [Perseus Treebank Schema](http://nlp.perseus.tufts.edu/syntax/treebank/agdt/1.6/data/treebank-1.5.xsd)
+  * [Treebank Schema Documentation](http://nlp.perseus.tufts.edu/syntax/treebank/agdt/1.6/docs/README.txt)
 * [Alpheios Alignment Editor Screencast](http://alpheios.net/alpheios-demos/alignment/index.html)
  * [Alignment Tool](http://repos1.alpheios.net/exist/rest/db/app/align-entersentence.xhtml)
+ * [Alpheios Alignment Schema](https://alpheios.svn.sourceforge.net/svnroot/alpheios/xml_ctl_files/schemas/trunk/aligned-text.xsd)
 * [ISAW's awld.js library](http://isawnyu.github.com/awld-js/)
 * [Open Annotation Collaboration](http://www.openannotation.org/)
 * [Tufts/Bamboo Morphology Service API](https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description)
+* [Perseus Dynamic Lexicon](http://nlp.perseus.tufts.edu/lexicon/)
 
 
 
