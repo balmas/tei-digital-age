@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="NEH Institute Working With Text In a Digital Age :  Digital Edition Demonstration and Sample Code " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>NEH Institute Working With Text In a Digital Age</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/balmas/tei-digital-age">View on GitHub</a>
+
+          <h1 id="project_title">NEH Institute Working With Text In a Digital Age</h1>
+          <h2 id="project_tagline"> Digital Edition Demonstration and Sample Code </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/balmas/tei-digital-age/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/balmas/tei-digital-age/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>NEH Institute Working With Text In a Digital Age</h1>
+
+<p>Digital Edition Demonstration and Sample Code </p>
+
+<p>Tufts University, July 2012</p>
+
+<h2>Overview</h2>
+
+<p>The goal of this demo/sample code is to provide a platform which institute participants can use to complete an exercise to create a miniature digital edition.  We will use
+these editions as concrete examples for discussion of decisions and issues to consider when creating digital editions from TEI XML, annotations and other related resources.</p>
+
+<p>Some specific items for consideration and discussion through this exercise :</p>
+
+<ul>
+<li>Creating identifiers for your texts.</li>
+<li>Establishing markup guidelines and best practices.</li>
+<li>Use of inline annotations versus standoff markup.</li>
+<li>Dealing with overlapping hierarchies.</li>
+<li>OAC (Open Annotation Collaboration)</li>
+<li>Leveraging annotation tools.</li>
+<li>Applying Linked Data concepts.</li>
+<li>Distribution formats: optimzing for display vs for enabling data reuse.</li>
+</ul><h2>Data</h2>
+
+<p>We have selected two sample texts for the exercise, one Greek and one Latin. The Greek is a fragment of Hegesippus from the Greek Anthology and the Latin is a poem of Sidonius.  </p>
+
+<p>The data for the samples can be found in the src/data directory of the repository and contain the following for each text:</p>
+
+<ul>
+<li>links to catalog records for the text</li>
+<li>links to digital copies of the text and translation</li>
+<li>the work identifier</li>
+<li>the OCR of the bibliographic information</li>
+<li>the OCR of the source text (original and corrected)</li>
+<li>the OCR of the English translation (original and corrected)</li>
+</ul><h2>Tools</h2>
+
+<h3>Creation</h3>
+
+<ul>
+<li>oXygen for creating and editing the TEI and running transformations </li>
+<li>the Alpheios Alignment and Treebank editors to prepare alignment and syntactic annotations in standoff markup. </li>
+<li>the Stylebear XSLT maker was used to customize the standard TEI to XHTML transformations provided by tei-c.org </li>
+</ul><h3>Display</h3>
+
+<ul>
+<li>ISAW's awld.js library for display of linked data resources </li>
+<li>Tufts Morphology Service + Alpheios Lexicon service for lemma lookup</li>
+<li>Alpheios Treebank Viewer for Syntax</li>
+</ul><h2>Markup Guidelines</h2>
+
+<p>We are using the <a href="http://segonku.unl.edu/teianalytics/TEIAnalytics.html">TEI-Analytics</a> subset of TEI P5. This schema is in the src/schemas directory.  </p>
+
+<p>The scripts which prepare the digital edition require the following specific applications of this standard:</p>
+
+<ul>
+<li>TEI element must contain an 'xml:lang' attribute for the main language of the text. Use 3 character language codes (grc, lat or eng)</li>
+<li>Named entities should be identified using the &lt;name/&gt; element, using the 'ref' attribute to point to a URI for the named entity.
+
+<ul>
+<li>If you specify a URI reference for a named entity which is among those supported by awld.js the display will automatically include that resource.</li>
+</ul>
+</li>
+<li>Citations should be identified using a quote tag inside a cit tag.<br><ul>
+<li>If you specify a valid CTS URN from the Perseus repository as the value of the 'n' attribute on your quote tag, the display will automatically include that resource.</li>
+</ul>
+</li>
+</ul><h2>Preparing the Digital Edition</h2>
+
+<ol>
+<li>Download and extract <a href="https://github.com/balmas/tei-digital-age/zipball/master">the zip file</a> to a local directory, preserving folders; or clone <a href="https://github.com/balmas/tei-digital-age">the project github repository</a> using Git.</li>
+<li>Select one of the two sample texts to work with, either the Hegesippus or the Sidonius. Each has a transcription and a translation you will be working with. </li>
+</ol><h2>Transcribe</h2>
+
+<ul>
+<li>
+<p>Templates for the transcription TEI XML have been created for you in xml directory. </p>
+
+<ul>
+<li>tlg1396.tlg001.teida-grc1.xml (Hegesippus Text - Greek Transcription)</li>
+<li>stoa0261.stoa001_3.teida-lat1.xml (Sidonius Text - Latin Transcription)</li>
+<li>tlg1396.tlg001.teida-eng1.xml (Hegesippus Text - English Translation)</li>
+<li>stoa0261.stoa001_3.teida-eng1.xml (Sidonius Text - English Translation)</li>
+</ul>
+</li>
+<li>
+<p>The file header metadata and basic document structure for the text are already populated. You need to add the markup of the text so that the file validates according to the schema.  Some things to consider identifying in the markup are:</p>
+
+<ul>
+<li>poetic lines (if applicable)</li>
+<li>named entities</li>
+<li>meter</li>
+<li>quotations and citations</li>
+</ul>
+</li>
+</ul><p>(Note: the source data from which the templates were created can be found in the src/data directory.)</p>
+
+<h2>Annotate</h2>
+
+<h3>Align Translation</h3>
+
+<ul>
+<li>Use the Alpheios Alignment Editor to align the translations.
+
+<ul>
+<li>
+<a href="http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=tlg1396.tlg001.align">http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=tlg1396.tlg001.align</a> (Hegesippus)</li>
+<li>
+<a href="http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=stoa0261.stoa001.align">http://repos1.alpheios.net/exist2/rest/db/xq/align-getlist.xq?doc=stoa0261.stoa001.align</a> (Sidonius)</li>
+</ul>
+</li>
+<li>Select a sentence to align the individual words in the sentence.</li>
+<li>After aligning the sentence, export your work for inclusion in your digital edition:
+
+<ul>
+<li>click the Export XML button and save in a local directory.</li>
+</ul>
+</li>
+<li>Repeat for as many of the sentences as you want to annotate</li>
+<li>Combine the downloaded XML files into a single file in the xml directory of the demo environment by inserting the &lt;sentence&gt; elements from the downloaded alignments into the template file for that text in the xml directory 
+as child elements of the &lt;aligned-text&gt; root element (after the 2 &lt;language&gt; elements). The template files are:
+
+<ul>
+<li>tlg1396.tlg001.teida-grc1.teida-eng1.align.xml (Hegesippus Text)</li>
+<li>stoa0261.stoa001_3.teida-lat1.teida-eng1.align.xml (Sidonius Text)</li>
+</ul>
+</li>
+</ul><h3>Annotate Syntax</h3>
+
+<ul>
+<li>Use the Alpheios Treebank Editor to annotate the syntax.
+
+<ul>
+<li>
+<a href="http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001.teida-grc1-ro">http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=tlg1396.tlg001.teida-grc1-ro</a> (Hegesippus)</li>
+<li>
+<a href="http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001.teida-lat1-ro">http://repos1.alpheios.net/exist2/rest/db/xq/treebank-getlist.xq?doc=stoa0261.stoa001.teida-lat1-ro</a> (Sidonius)</li>
+<li>NOTE: for purposes of the demo, just experiment with the treebank editor but do not save your annotations - these are read-only copies.  We will use 
+the pre-prepared annotations for the integration demo which are already in the xml folder:</li>
+<li>tlg1396.tlg001.teida-grc1.tb.xml (Hegesippus Text)</li>
+<li>stoa0261.stoa001_3.teida-lat1.tb.xml (Sidonius Text)</li>
+</ul>
+</li>
+</ul><h2>Merge Standoff Markup with TEI to create Digital Editions</h2>
+
+<p>A set of pre-prepared transformation scenarios can be used to transform the TEI transcription, translation, alignment and syntax annotations. These will work 
+on the pre-prepared demo XML files in the xml-demo directory, or ones you prepare and put in the xml directory as described above.</p>
+
+<ul>
+<li>Import the transformations from the scenarios.xml file
+
+<ul>
+<li>Options, Import Global Options and select scenarios.xml</li>
+<li>This will load the XQuery and XSLT transformation scenarios listed below into your oXygen environment</li>
+<li>The scenarios configure parameter values as input to the alignannotations.xquery and teiDriver.xsl files</li>
+</ul>
+</li>
+<li>Open the transcription xml
+
+<ul>
+<li>xml is in the xml folder (or for the pre-prepared demo xml, it's in xml-demo)</li>
+<li>Greek source is tlg1396.tlg001.teida-grc1.xml</li>
+<li>Latin source is stoa0261.stoa001_3.teida-lat1.xml</li>
+</ul>
+</li>
+<li>run alignannotations-greekDemo or alignannotations-latinDemo XQuery transformation scenario
+
+<ul>
+<li>Document, Transformation, Configure Transformation Scenario</li>
+<li>Select XML Transformation With XQuery transformation type</li>
+<li>Select alignannotations-greekDemo (or alignannotations-latinDemo)</li>
+<li>Make sure oXygen is set to output results as a file (click Edit, Output tab and make sure Evaluate as Sequence is unchecked)</li>
+</ul>
+</li>
+<li>Click Transform Now</li>
+<li>Open translated xml
+
+<ul>
+<li>xml is in the xml folder</li>
+<li>Greek translation is tlg1396.tlg001.teida-eng1.xml</li>
+<li>Latin translation is stoa0261.stoa001_3.teida-eng1.xml</li>
+</ul>
+</li>
+<li>run reversealignannotations-greekDemo or reversealignannotations-latinDemo XQuery transformation scenario
+
+<ul>
+<li>Same instructions as above for alignannotations-greekDemo/alignannotations-latinDemo</li>
+</ul>
+</li>
+<li>Open newly created digital edition xml
+
+<ul>
+<li>this the file created in the previous step, it should be in the digitaleditions directory and is either tlg1396.tlg001.teida-grc1.de.xml or stoa0261.stoa001_3.teida-grc1.de.xml</li>
+</ul>
+</li>
+<li>run transformtodisplay-greekDemo or transformtodisplay-latinDemo XSLT Transformation scenario</li>
+<li>load the resulting html file in your browser (Firefox is preferred)
+
+<ul>
+<li>digitaledition/tlg1396.tlg001.teida-grc1.de.html or digitaledition/tlg1396.tlg001.teida-grc1.de.html </li>
+<li>Note: the syntax viewer frame does not currently work properly in Chrome or Safari.</li>
+</ul>
+</li>
+</ul><h2>Discussion</h2>
+
+<ul>
+<li>Annotating meter inline vs standoff markup
+
+<ul>
+<li>Hegesippus poem demonstrates alternation of hexameters and iambic trimeters (lines 1, 3, 5, and 7 are hexameters)</li>
+</ul>
+</li>
+<li>Approaches to notes, commentary and apparatus
+
+<ul>
+<li>Sidonius notes were left out in the pre-prepared demo code, but should really be included</li>
+</ul>
+</li>
+<li>...</li>
+</ul><h2>Resources</h2>
+
+<p>The following resources may be helpful in understanding the exercise and for working with digital editions:</p>
+
+<ul>
+<li><a href="http://www.homermultitext.org/hmt-doc/cite/index.html">CITE Architecture</a></li>
+<li><a href="http://segonku.unl.edu/teianalytics/TEIAnalytics.html">TEI-Analytics Schema</a></li>
+<li><a href="http://www.tei-c.org/release/doc/tei-xsl-common/customize.html">TEI XSL Customization Handbook</a></li>
+<li><a href="http://www.tei-c.org/release/doc/tei-xsl-common/style.html">Stylebear TEI XSL Customizer</a></li>
+<li>
+<a href="http://nlp.perseus.tufts.edu/syntax/treebank/">Perseus Treebanking</a>
+
+<ul>
+<li><a href="http://vimeo.com/15324213">Alpheios Treebank Editor Screencast</a></li>
+<li><a href="http://repos1.alpheios.net/exist/rest/db/app/treebank-entertext.xhtml">Treebank Tool</a></li>
+<li><a href="http://treebank.alpheios.net/">Treebank Guidelines</a></li>
+<li><a href="http://nlp.perseus.tufts.edu/syntax/treebank/agdt/1.6/data/treebank-1.5.xsd">Perseus Treebank Schema</a></li>
+<li><a href="http://nlp.perseus.tufts.edu/syntax/treebank/agdt/1.6/docs/README.txt">Treebank Schema Documentation</a></li>
+</ul>
+</li>
+<li>
+<a href="http://alpheios.net/alpheios-demos/alignment/index.html">Alpheios Alignment Editor Screencast</a>
+
+<ul>
+<li><a href="http://repos1.alpheios.net/exist/rest/db/app/align-entersentence.xhtml">Alignment Tool</a></li>
+<li><a href="https://alpheios.svn.sourceforge.net/svnroot/alpheios/xml_ctl_files/schemas/trunk/aligned-text.xsd">Alpheios Alignment Schema</a></li>
+</ul>
+</li>
+<li><a href="http://isawnyu.github.com/awld-js/">ISAW's awld.js library</a></li>
+<li><a href="http://www.openannotation.org/">Open Annotation Collaboration</a></li>
+<li><a href="https://wiki.projectbamboo.org/display/BTECH/Morphological+Analysis+Service+Contract+Description">Tufts/Bamboo Morphology Service API</a></li>
+<li><a href="http://nlp.perseus.tufts.edu/lexicon/">Perseus Dynamic Lexicon</a></li>
+</ul><p>Created for the NEH Institute for Advanced Technology in the Digital Humanities by Bridget Almas, The Perseus Project, Tufts University July 2012</p>
+
+<p>This free software: you can redistribute it and/or modify it under the terms of the <a href="http://www.gnu.org/licenses/">GNU General Public License</a> as published by the Free Software Foundation, 
+either version 3 of the License, or (at your option) any later version.</p>
+
+<p>This  software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</p>
+
+<p>See <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">NEH Institute Working With Text In a Digital Age maintained by <a href="https://github.com/balmas">balmas</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
