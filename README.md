@@ -150,7 +150,7 @@ The following resources may be helpful in understanding the exercise and for wor
 * [TEI-Analytics Schema](http://segonku.unl.edu/teianalytics/TEIAnalytics.html)
 * [TEI XSL Customization Handbook](http://www.tei-c.org/release/doc/tei-xsl-common/customize.html)
 * [Stylebear TEI XSL Customizer](http://www.tei-c.org/release/doc/tei-xsl-common/style.html)
-* [Perseus Treebanking](http://nlp.perseus.tufts.edu/syntax)
+* [Perseus Treebanking](http://nlp.perseus.tufts.edu/syntax/treebank/)
   * [Alpheios Treebank Editor Screencast](http://vimeo.com/15324213)
   * [Treebank Tool](http://repos1.alpheios.net/exist/rest/db/app/treebank-entertext.xhtml)
   * [Treebank Guidelines](http://treebank.alpheios.net/)
