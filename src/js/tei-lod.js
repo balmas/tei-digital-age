@@ -6,7 +6,8 @@
          **/
         lexicons: {
             'grc' : 'lsj',
-            'lat' : 'ls'
+            'lat' : 'ls',
+            'ara' : 'lan'
         },
         
         /**
@@ -15,6 +16,7 @@
         morphEngines: {
             'grc': 'morpheus',
             'lat': 'morpheus',
+            'ara': 'aramorph'
         },
         
         /**

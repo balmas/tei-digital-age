@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.github.com/balmas/tei-digital-age/master/src/schemas/tei-xl.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:lang="ara">
+	<teiHeader type="text">
+		<fileDesc>
+			<titleStmt>
+				<title>De auctu (Quaestio I 5)</title>
+				<author>Alexander of Aphrodisias</author>
+				<editor role="editor">Hans-Jochen Ruland</editor>
+				<funder>Andrew W. Mellon Foundation</funder>
+			</titleStmt>
+		    <publicationStmt>
+		        <publisher>Trustees of Tufts University</publisher>
+		        <pubPlace>Medford, MA</pubPlace>
+		        <authority>Perseus Project</authority>
+		    </publicationStmt>
+			<sourceDesc>
+			    <listBibl>
+			        <bibl>
+			            <title>Die arabische Übersetzung der Schrift des Alexander von Aphrodisias über das Wachstum (Quaestio I 5)</title>
+			            <author>Alexander of Aphrodisias</author>
+			            <editor role="editor">Hans-Jochen Ruland</editor>
+			            <pubPlace>Göttingen</pubPlace>
+			            <publisher>Vandenhoeck &amp; Ruprecht</publisher>
+			            <date>1981</date>
+			            
+			        </bibl>
+			        </listBibl>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+		    <p>Data Entry</p>
+		    <refsDecl>
+			<refState unit="page" />
+	               </refsDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+			    <language ident="ara">Arabic</language>
+			</langUsage>
+		</profileDesc>
+	</teiHeader>
+
+<text xml:lang="ara" n="urn:cts:greekLit:tlg0732.tlg012.teida-ara1">
+
+<body>
+
+<pb n="12"/>
+
+<p>
+<note type="foliobreak" place="margright">E 101b</note>
+〈بسم الله الرحمن الرحيم، وهـ〉ـو حسبنا، ونعم الوكيل
+</p>
+
+<p rend="head">
+مقالة الاسكندر الأفروديسى فى أنّ النشوء والنماء يكونان
+فى الصورة، لا فى الهيولى. اخراج أبى عثمان الدمشقى،
+رحمه الله بمنّه.
+</p>
+<p>
+<note type="linenumber" place="margright">٥</note>
+قال الاسكندر انّ أرسطوطاليس ذكر فى كتاب الكون
+والفساد انّ النشوء والنماء يكونان فى الصورة، لا فى الهيولى.
+وقد أنكر ذلك قوم فقالوا انّ الجرم وكلّ ما يقبل النشوء 〈انّما
+ينشؤ〉 فى صورته وعنصره جميعاً. فقال الفيلسوف انّ النشوء.
+يكون فى الصورة، لبس فى الهيولى.
+</p>
+<p>
+<note type="linenumber" place="margright">١٠</note>
+قال الاسكندر فنريد أن نحلّ هذا الشكّ فنقول انّ
+الهيولى تتبدّل قليلا قليلا فى النشء، أعنى عنصر ذلك الشىء.
+وذلك أنّه يبقى بعضه ويأتى آخر من خارج، من غير أن تذهب
+الهيولى كلّها، لأنّها لو ذهبت كلّها، لم تكن الصورة لتبقى
+على حالها.
+</p>
+<p>
+<note type="linenumber" place="margright">١٥</note>
+فنرجع الآن فنقول انّ صورة الشىء وهيولاه تنشؤان
+
+<pb n="14"/>
+
+جميعا وانّ الهيولى تشبه الكميّة والصورة تشبه الكيفيّة.
+وكميّة الشىء تنتقل وتتبدّل ولا تثبت على حالها الأوّل، وأمّا
+كيفيّة 〈الشىء〉 التى هى صورته، 〈فهى〉 ثابتة باقية على حالها
+الأوّل.
+</p>
+<p>
+<note type="linenumber" place="margright">٢٠</note>
+فلمّا أن صارت كيفيّة الشىء، أعنى صورته، ثابتة وصارت كميّته
+متبدّلة غير ثابتة وعلّة انتقالها تبدّلها (؟) من سيلان
+<note type="foliobreak" place="margright">T 2</note>
+الهيولى، قال لذلك الحكيم انّ الأشياء │ الناشئة ليست
+تنشؤ فى الهيولى، لاكنّها تنشؤ فى الصورة، لأنّ الصورة تبقى
+على حالها الأوّل من غير تبدّل وتنقّل والنشوء انّما يكون على
+<note type="linenumber" place="margright">٢٥</note>
+شىء قائم ثابت.
+</p>
+<p>
+ونقول أيضا انّ الناشئ، وان كان ينشؤ مع هبولاه وصورته،
+لاكنّه بحال سيلان الهيولى، وهى عنصره، لا ينعت النشوء
+<note type="foliobreak" place="margright">E 102a</note>
+على │ العنصر، لأنّ العنصر، كما 〈قلنا، يتبدّل ولا يثبت على
+حال واحدة. فان نُعِت〉 به، فانّما ينعت 〈بتبدّل〉 العنصر
+<note type="linenumber" place="margright">٣٠</note>
+〈وتغيره. وذلك أنّا لا〉 نستطيع أن نجد العنصر فى الشىء
+
+<pb n="16"/>
+
+الناشئ 〈ثابتا دائما غير متبدّل، لاكنّه يتبدّل بالكميّة، أعنى
+أنّ كلّ جزء من أجزاء العنصر الناشئ〉 يسيل ويتبدّل
+حتّى لا يبقى شىء منه على حاله الأوّل. فأمّا صورة الناشئ
+فتبقى دائمة، ما كان الناشئ قائما غير واقع تحت الفساد.
+</p>
+<p>
+<note type="linenumber" place="margright">٣٥</note>
+ونقول أيضا انّ النشوء حركة من الحركات وانّ الحركة
+لا تكون الّا على شىء ساكن. وقد قلنا انّ الصورة باقية وانّ
+العنصر منتقل، والنشوء اذن لا يكون الّا فى صورة الشىء فقط.
+〈فقد استبان و〉اتّضح قول الفيلسوف انّ النشوء يكون فى
+الصورة، لا فى العنصر.
+</p>
+<p>
+تمّت المقالة بحمد الله وحسن عونه وتأييده ومنّه
+ورضوانه على كافّة أنبيائه.
+</p>
+
+</body>
+
+</text>
+
+</TEI>
