@@ -132,7 +132,7 @@ on the pre-prepared demo XML files in the xml-demo directory, or ones you prepar
   * this the file created in the previous step, it should be in the digitaleditions directory and is either tlg1396.tlg001.teida-grc1.de.xml or stoa0261.stoa001_3.teida-grc1.de.xml
 * run transformtodisplay-greekDemo or transformtodisplay-latinDemo XSLT Transformation scenario
 * load the resulting html file in your browser (Firefox is preferred)
-  * digitaledition/tlg1396.tlg001.teida-grc1.de.html or digitaledition/tlg1396.tlg001.teida-grc1.de.html 
+  * digitaledition/tlg1396.tlg001.teida-grc1.de.html or digitaledition/stoa0261.stoa001_3.teida-lat1.de.html 
   * Note: the syntax viewer frame does not currently work properly in Chrome or Safari.
 
 ## Discussion 
