@@ -273,6 +273,8 @@ declare function local:print-nodes(
                         } else (),
                     if ($fixed/@tbrefs) then 
                         attribute ana {
+                            string($fixed/@tbrefs)
+                            (:
                             if (contains($fixed/@tbrefs, ' ')) then 
                                 string-join (
                                     for $t in tokenize(normalize-space($fixed/@tbrefs),' ')
@@ -281,6 +283,7 @@ declare function local:print-nodes(
                             else 
                                 let $parts := tokenize($fixed/@tbrefs,'-')
                                 return concat($e_treebank,"#xpointer(//sentence[@id='", $parts[1],"']/word[@id='", $parts[2], "'])")
+                            :)
                         } 
                     else (),
                     $fixed/*,
@@ -517,7 +520,7 @@ then
       if (doc-available($tbDoc))
       then
         for $word in doc($tbDoc)//*:word
-            where not(matches($word/@form, $match-nontext))
+            where not(matches($word/@form, $match-nontext)) or ($e_includePunc = true() and matches($word/@form,$match-punc))  
             return
             element {QName("http://www.tei-c.org/ns/1.0","w")}
             {
@@ -527,7 +530,8 @@ then
                 (: build name from sentence# and word# :)
                     attribute n
                     {
-                      concat($word/../@id, "-", $word/@id)
+                      (: concat($word/../@id, "-", $word/@id) :)
+                      $word/@relation
                     }
                 else (),
                   data($word/@form)

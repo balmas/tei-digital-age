@@ -14,15 +14,15 @@
          * Map of language codes to morphology engine for form lookup
          */
         morphEngines: {
-            'grc': 'morpheus',
-            'lat': 'morpheus',
+            'grc': 'morpheusgrc',
+            'lat': 'morpheuslat',
             'ara': 'aramorph'
         },
         
         /**
          * Url to morphology service
          */
-        morphUrl : 'http://shell.perseus.tufts.edu:8181/bsp/morphologyservice/analysis/word?word=WORD&lang=LANG&engine=ENGINE',
+        morphUrl : 'http://services.perseids.org/bsp/morphologyservice/analysis/word?word=WORD&lang=LANG&engine=ENGINE',
         
         /**
          * Url to lexicon service
@@ -44,6 +44,10 @@
             $('.tei-aligned-word[data-corresp]').mouseover(teilod.showTranslation);
             $('.tei-aligned-word[data-corresp]').mouseout(teilod.hideTranslation);
             $('.tbref').click(teilod.getSyntax);
+            teilod.makeGraph();
+            PerseidsLD.do_verb_query();
+            PerseidsLD.do_simple_query();
+            $("#tei-analyses").click(function() { PerseidsTools.do_image_link(this); });
         },
         
         /**
@@ -214,7 +218,80 @@
                     }
                 }                       
                 return elem_lang;
-            }
+            },
+            
+            makeGraph: function() {
+                
+                var margin = {top: 20, right: 20, bottom: 30, left: 40},
+                    width = 960 - margin.left - margin.right,
+                    height = 250 - margin.top - margin.bottom;
+                
+                var x = d3.scale.ordinal()
+                    .rangeRoundBands([0, width], .1);
+                
+                var y = d3.scale.linear()
+                    .range([height, 0]);
+                
+                var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom");
+                
+                var yAxis = d3.svg.axis()
+                    .scale(y)
+                    .orient("left")
+                    .ticks(10, "");
+                
+                var svg = d3.select("#themegraph").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                  .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                
+                var data = d3.csv.parseRows($.trim($("#tei-analyses").text()), function(d) { return { "letter" : d[0], "frequency": d[1]}; });
+                x.domain(data.map(function(d) { return d.letter; }));
+                y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+                svg.append("g")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(xAxis);
+                     
+                svg.append("g")
+                    .attr("class", "y axis")
+                    .call(yAxis)
+                    .append("text")
+                    .attr("transform", "rotate(-90)")
+                    .attr("y", 6)
+                    .attr("dy", ".71em")
+                    .style("text-anchor", "end")
+                    .text("Occurrences");
+
+                svg.selectAll(".bar")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("class", "bar")
+                    .attr("x", function(d) { return x(d.letter); })
+                    .attr("width", x.rangeBand())
+                    .attr("y", function(d) { return y(d.frequency); })
+                    .attr("height", function(d) { return height - y(d.frequency)})
+                    .attr("data-text", function(d) { return $.trim(d.letter)});
+               $(".bar").mouseover(function() {
+                    $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").addClass("highlight-theme");
+                });
+               $(".bar").mouseout(function() {
+                    $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").removeClass("highlight-theme");
+                });
+               $(".bar").click(function() {
+                    var images = $("#tei-images div[data-facs-theme='" + $(this).attr("data-text") + "'] span");
+                    if (images.length == 1 ){
+                        debugger;
+                        PerseidsTools.do_image_link(images.get(0));
+                    } else if (images.length > 1) {
+                        alert("We need to offer pagination of images");
+                    }
+                    //alert("This will eventually search all documents for " + $(this).attr("data-text") + " and display browseable results below");
+                });
+        }
+        
     };
     window.teilod = teilod;
 })(window);

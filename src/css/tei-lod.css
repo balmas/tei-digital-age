@@ -34,7 +34,51 @@
     float: right;
     right: -40%;
     width: 40%;
-    overflow: scroll;
-    border: 1px solid black;
+    /** overflow: scroll;
+    border: 1px solid black; **/
     padding: 1em;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.highlight-theme {
+    background-color: brown;
+}
+
+#hideictframe {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: right;
+    width: 96%;    
+}
+
+img {
+    cursor: pointer;
+}
+
+.mainAuthor, .mainEditor {
+    font-style:italic;
+    font-size: smaller;
 }
