@@ -105,6 +105,18 @@
                     }
                     $(this).addClass('highlight');
                     node.addClass('highlight');
+                    if (node.length > 0) {
+                          $('.tei_body').stop();
+                        if (isTranslation) {
+                          $('.tei_body').animate({
+                            scrollTop: ($(node[0]).position().top)},500);
+                        } else {
+                          $('.tei-aligned-text').stop();
+                          $('.tei-aligned-text').animate({
+                            scrollTop: ($(node[0]).position().top)},500);
+                            
+                        }
+                    }
                 }
             }
             
@@ -275,23 +287,61 @@
                     .attr("height", function(d) { return height - y(d.frequency)})
                     .attr("data-text", function(d) { return $.trim(d.letter)});
                $(".bar").mouseover(function() {
+                    $(".tei-body").stop();
                     $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").addClass("highlight-theme");
+                    var top = $(".tei-word[data-ana='" + $(this).attr("data-text") + "']");
+                    if (top.length > 0)
+                    $('.tei_body').animate({
+                        scrollTop: ($(top[0]).position().top)},500);
                 });
                $(".bar").mouseout(function() {
                     $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").removeClass("highlight-theme");
                 });
-               $(".bar").click(function() {
-                    var images = $("#tei-images div[data-facs-theme='" + $(this).attr("data-text") + "'] span");
-                    if (images.length == 1 ){
-                        debugger;
-                        PerseidsTools.do_image_link(images.get(0));
-                    } else if (images.length > 1) {
-                        alert("We need to offer pagination of images");
-                    }
-                    //alert("This will eventually search all documents for " + $(this).attr("data-text") + " and display browseable results below");
-                });
+               $(".bar").click(function() { teilod.toggleTheme(this)});
+        },
+
+        toggleTheme: function(a_elem) {
+            var words = $(".tei-word[data-ana='" + $(a_elem).attr("data-text") + "']");
+            var images = $("#tei-images div[data-facs-theme='" + $(a_elem).attr("data-text") + "'] span");
+            var themeclass = "highlight-theme";
+            var clickclass = "click-theme";
+            var toggleOn = true;
+            var oldclass = $(a_elem).attr("class");
+            if (oldclass.match(clickclass)) {
+              toggleOn = false;
+            }
+            if (toggleOn) {
+              /** jQuery hasClass isn't working on the SVG element so we need to add/remove class manually **/
+              var oldclass = $(a_elem).attr("class");
+              $(a_elem).attr("class",oldclass + " " + clickclass);
+              words.addClass(clickclass);
+              var top = $(".tei-word[data-ana='" + $(a_elem).attr("data-text") + "']");
+              if (top.length > 0) {
+                $('.tei_body').stop();
+                $('.tei_body').animate({scrollTop: ($(top[0]).position().top)},500);
+              }
+              if (images.length == 1 ) {
+                PerseidsTools.do_image_link(images.get(0));
+                if (!jQuery("#ict_frame").is(':visible')) {
+	          jQuery('#ict_frame').slideDown("slow", function() {$("#hideictframe").show()});
+                }
+              } else if (images.length > 1) {
+                  console.log("We need to offer pagination of images");
+              }
+              //alert("This will eventually search all documents for " + $(this).attr("data-text") + " and display browseable results below");
+            } else {
+              debugger;
+              /** jQuery hasClass isn't working on the SVG element so we need to add/remove class manually **/
+              $(a_elem).attr("class",oldclass.replace(' ' + clickclass, ""));
+              words.removeClass(clickclass);
+              if (images.length > 0 ) {
+	        jQuery('#ict_frame').slideUp("slow", function() {$("#hideictframe").hide()});
+              }
+            }
         }
+
         
     };
+
     window.teilod = teilod;
 })(window);

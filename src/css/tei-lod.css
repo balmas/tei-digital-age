@@ -45,6 +45,7 @@
 
 .bar:hover {
   fill: brown;
+  opacity: 0.5;
 }
 
 .axis {
@@ -64,6 +65,15 @@
 
 .highlight-theme {
     background-color: brown;
+    opacity: 0.5;
+}
+.click-theme {
+    background-color: brown;
+    opacity: 1;
+}
+.bar.click-theme, .bar.click-theme:hover {
+  fill: brown;
+  opacity: 1;
 }
 
 #hideictframe {
@@ -81,4 +91,9 @@ img {
 .mainAuthor, .mainEditor {
     font-style:italic;
     font-size: smaller;
+}
+
+.tei_body, .tei-aligned-text {
+    max-height: 800px;
+    overflow: scroll;
 }

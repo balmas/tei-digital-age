@@ -7,7 +7,7 @@
 <!-- XSLT stylesheet to generate HTML version of TEI document.
 Written by the TEI XSL generator (Sebastian Rahtz, sebastian.rahtz@oucs.ox.ac.uk)
 Created on 13 Jul 2012-->
-<xsl:import href="http://www.tei-c.org/release/xml/tei/stylesheet/xhtml2/tei.xsl"/>
+<xsl:import href="http://www.tei-c.org/release/xml/tei/stylesheet/html5/html5.xsl"/>
 <xsl:import href="tei-lod.xsl"/>
 <xsl:template name="navbar">  <xsl:choose>
     <xsl:when  test="$navbarFile=''">
@@ -80,14 +80,14 @@ Created on 13 Jul 2012-->
             <xsl:call-template  name="makeHTMLHeading">
               <xsl:with-param  name="class">subtitle</xsl:with-param>
               <xsl:with-param  name="text">
-                <xsl:call-template  name="generateSubTitle"/>
+                <!--xsl:call-template  name="generateSubTitle"/-->
               </xsl:with-param>
               <xsl:with-param  name="level">2</xsl:with-param>
             </xsl:call-template>
             <xsl:call-template  name="makeHTMLHeading">
               <xsl:with-param  name="class">title</xsl:with-param>
               <xsl:with-param  name="text">
-                <xsl:call-template  name="generateTitle"/>
+                <!--xsl:call-template  name="generateTitle"/-->
               </xsl:with-param>
               <xsl:with-param  name="level">1</xsl:with-param>
             </xsl:call-template>
@@ -100,14 +100,14 @@ Created on 13 Jul 2012-->
       <xsl:call-template  name="makeHTMLHeading">
         <xsl:with-param  name="class">subtitle</xsl:with-param>
         <xsl:with-param  name="text">
-          <xsl:call-template  name="generateSubTitle"/>
+          <!--xsl:call-template  name="generateSubTitle"/-->
         </xsl:with-param>
         <xsl:with-param  name="level">2</xsl:with-param>
       </xsl:call-template>
       <xsl:call-template  name="makeHTMLHeading">
         <xsl:with-param  name="class">title</xsl:with-param>
         <xsl:with-param  name="text">
-          <xsl:call-template  name="generateTitle"/>
+          <!--xsl:call-template  name="generateTitle"/-->
         </xsl:with-param>
         <xsl:with-param  name="level">1</xsl:with-param>
       </xsl:call-template>
@@ -116,7 +116,7 @@ Created on 13 Jul 2012-->
 <xsl:template name="metaHTML">  <xsl:param  name="title"/>
   <meta  name="author">
     <xsl:attribute  name="content">
-      <xsl:call-template  name="generateAuthor"/>
+      <!--xsl:call-template  name="generateAuthor"/-->
     </xsl:attribute>
   </meta>
   <xsl:if  test="$filePerPage='true'">

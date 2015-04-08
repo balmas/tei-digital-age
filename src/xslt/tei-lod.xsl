@@ -19,56 +19,64 @@ See <http://www.gnu.org/licenses/>.
     xmlns:teida="http://data.perseus.org/namespaces/teida"
     exclude-result-prefixes="tei xsl teida">
     
-    <xsl:output indent="yes"/>
+    <xsl:output indent="yes" method="html"/>
+    <xsl:preserve-space elements="*"/>
     <!-- file containing the aligned translation markup -->
     <xsl:param name="teida:translationFile"></xsl:param>
+    <!-- file containing image tags -->
+    <xsl:param name="teida:imageFile"></xsl:param>
+    <xsl:param name="teida:urn">urn:cts:latinLit:phi0914.phi001</xsl:param>
     
      <!-- startHook is called after processing the tei:body element -->
      <xsl:template name="startHook" exclude-result-prefixes="tei xsl teida">
+        <div id="themegraph">
+        </div>
+         <iframe id="ict_frame" style="display:none;" src="" width="96%" height="220px"></iframe>
+         <div style="display:none;" id="hideictframe" onclick="PerseidsTools.hideImageViewer();">Close Image Viewer</div>
         <div id="tei-tools">
         <!-- add some extra features to source text only -->
         <xsl:if test="tei:text/@xml:lang != 'eng'">
             <!-- add a div to contain the results of the lexicon lookup -->
-            <div id="tei-lemmas"><h2>Lexicon Lookup</h2><div class="tei-hint">Double-click on a word to lookup in the lexicon.</div></div>
+            <!--div id="tei-lemmas"><h2>Lexicon Lookup</h2><div class="tei-hint">Double-click on a word to lookup in the lexicon.</div></div-->
         </xsl:if>
+         <!-- add thumbs -->
+     
+            
          <!-- add syntax lookup -->
-         <xsl:if test="//tei:w/@ana">
-                <div id="tei-analyses">
-                    <h2>Syntax:</h2>
-                    <xsl:variable name="tbrefs">
-                        <xsl:for-each select="//tei:w/@ana">
-                            <xsl:for-each select="tokenize(.,' ')">
-                                <xsl:variable name="file" select="concat('../../xml/',substring-before(.,'#xpointer'))"/>
-                                <tbref>
-                                    <xsl:analyze-string select="." regex="^.*?sentence\[@id='(\d+)'\].*$">
-                                        <xsl:matching-substring><xsl:value-of select="concat($file,'|',regex-group(1))"/></xsl:matching-substring>
-                                    </xsl:analyze-string>    
-                                </tbref>
-                            </xsl:for-each>
-                        </xsl:for-each>
-                    </xsl:variable>
-                    <ul>
-                        <xsl:for-each select="distinct-values($tbrefs/*)">
-                            <xsl:variable name="xpath" select="substring-after(.,'|')"/>
-                            <xsl:variable name="file" select="substring-before(.,'|')"/>
-                            <xsl:variable name="sentence" select="doc($file)//*:sentence[@id=$xpath]"/>
-                            <xsl:if test="$sentence">
-                                <li class="tbref">
-                                    <span class="sentence"><xsl:value-of select="doc($file)//*:sentence[@id=$xpath]/*:word/@form"/></span>
-                                    <div class="data" style="display:none;">
-                                        <!-- this should really be converted to a valid HTML 5 element with data attributes -->
-                                        <sentence>
-                                            <xsl:copy-of select="$sentence/../@format"/>
-                                            <xsl:copy-of select="$sentence/../@xml:lang"/>
-                                            <xsl:copy-of select="$sentence/*"/>
-                                        </sentence>
-                                    </div>
-                                </li>
-                            </xsl:if>
-                        </xsl:for-each>
-                    </ul>
-                </div>
-            </xsl:if>
+         <xsl:variable name="themes">
+             <xsl:if test="//tei:w/@ana">
+                 <xsl:for-each select="//tei:w[@ana]" >
+                     <!-- skip the punctuation and the nils -->
+                     <xsl:if test="not(@ana = 'AuxK') and not(@ana='AuxX') and not(@ana='AuxZ') and not(@ana='nil') and not(@ana='nil nil') and not(@ana=' ')">
+                        <ana><xsl:copy-of select="@ana"/></ana>
+                     </xsl:if>
+                 </xsl:for-each>
+             </xsl:if>
+             <xsl:if test="$teida:imageFile">
+                 <xsl:for-each select="doc($teida:imageFile)//tei:w[@facs]" >
+                     <ana><xsl:attribute name="ana"><xsl:copy-of select="text()"/></xsl:attribute></ana>
+                 </xsl:for-each>
+             </xsl:if>
+        </xsl:variable>
+        <div id="tei-analyses" style="display:none;">
+             <xsl:for-each-group select="$themes/*" group-by="@ana">
+                 <xsl:value-of select="current-group()[1]/@ana"/>,<xsl:value-of select="count(current-group())"></xsl:value-of><xsl:text>
+                                 </xsl:text>                                
+             </xsl:for-each-group>
+        </div>
+            <div id="imgthumbs">
+                <div class="perseidsld_query_obj_simple" 
+                    data-queryuri="http://services.perseids.org/fuseki/ds/query?query="
+                    data-obj="{$teida:urn}" data-verb="http://www.cidoc-crm.org/cidoc-crm/P138_represents"
+                    data-refs-verb="http://purl.org/dc/terms/references"
+                    data-endpoint-verb="http://data.perseus.org/rdfvocab/cite/imageServer"
+                    data-formatter="thumbs"/>
+                <div class="perseidsld_query_verb_simple"
+                    data-queryuri="http://services.perseids.org/fuseki/ds/query?query="
+                    data-verb="http://data.perseus.org/rdfvocab/cite/imageViewer"
+                    data-formatter="set_endpoint_map"
+                    data-result-id="viewer"/>
+            </div>
         </div>
          <xsl:if test="$teida:translationFile">
              <!-- add a div to contain the translated text. note this includes any element identifies as @type=translation from the 
@@ -79,13 +87,24 @@ See <http://www.gnu.org/licenses/>.
                  <xsl:apply-templates select="doc($teida:translationFile)//*[@type='translation']"/>
              </div>
          </xsl:if>
+            <xsl:if test="$teida:imageFile">
+                <div id="tei-images" style="display:none;">
+                <xsl:for-each-group select="doc($teida:imageFile)//tei:w[@facs]" group-by="text()" >
+                    <div data-facs-theme="{current-group()[1]/text()}">
+                        <xsl:for-each select="current-group()">
+                            <span data-facs="{@facs}" data-theme="{text()}"/>
+                        </xsl:for-each>
+                    </div>
+                </xsl:for-each-group>
+                </div>
+            </xsl:if>
      </xsl:template>
     
     <!-- hook for end of html body -->
     <xsl:template name="bodyEndHook">
         <!--put the syntax frame at the bottom and use css to position -->
         <xsl:if test="//tei:w/@ana">
-            <iframe id="tei-syntax-frame" src="syntaxview.html"/>
+            <!--iframe id="tei-syntax-frame" src="syntaxview.html"/-->
         </xsl:if>
     </xsl:template>
     <!-- hook which pulls  css into the HTML head -->
@@ -96,15 +115,12 @@ See <http://www.gnu.org/licenses/>.
     <!-- hook which pulls javascript into the HTML head -->
     <xsl:template name="javascriptHook" exclude-result-prefixes="tei xsl teida">
         <!-- jquery library - should really be imported via a require.js? -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
         <!-- javascript library for the tei-digital-age demo -->
-        <script type="text/javascript" src="../src/js/tei-lod.js"></script>
-        
-        <!-- AWLD.JS library -->
-        <script type="text/javascript" src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"></script>
-        <script type="text/javascript" src="http://isawnyu.github.com/awld-js/awld.js?autoinit"></script>
-        
+        <script type="text/javascript" src="../src/js/tei-lod.js"></script>  
+        <script src="/sosoljs/perseids-ld.js"></script>
+        <script src="../src/js/perseids-tools.js"></script>
         <!-- jQuery document ready function to initialize the page elements on load -->
         <script type="text/javascript">
         $(
@@ -136,6 +152,21 @@ See <http://www.gnu.org/licenses/>.
             </xsl:call-template>
             <xsl:apply-templates/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:g">
+        <xsl:variable name="ref" select="@ref"/>
+        <xsl:variable name="glyph" select="/tei:TEI/tei:teiHeader/tei:encodingDesc/tei:charDecl/tei:glyph[@xml:id=$ref]/tei:figure[1]/tei:graphic[1]/@url"/>
+        <xsl:choose>
+            <xsl:when test="$glyph">
+                <!-- if we have a glyph image, use it -->
+                <img src="{$glyph}" alt="{.}"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- fall through to default behavior -->
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <!-- if a tei:name element contains a linkable reference, link it-->
@@ -172,7 +203,8 @@ See <http://www.gnu.org/licenses/>.
                         <xsl:value-of select="string-join($resources/*,' ')"/>
                     </xsl:when>
                     <xsl:when test="name(.) = 'ana'">
-                        <xsl:variable name="resources">
+                        
+                        <!--xsl:variable name="resources">
                             <xsl:for-each select="tokenize(., ' ')">
                                 <xsl:variable name="res">
                                     <xsl:analyze-string select="." 
@@ -185,7 +217,8 @@ See <http://www.gnu.org/licenses/>.
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:variable>
-                        <xsl:value-of select="string-join(distinct-values($resources/*),' ')"/>
+                        <xsl:value-of select="string-join(distinct-values($resources/*),' ')"/-->
+                        <xsl:value-of select="."/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="."/>
@@ -203,4 +236,23 @@ See <http://www.gnu.org/licenses/>.
         </p>
     </xsl:template>
     
+    <xsl:template match="tei:title">
+        <xsl:choose>
+        <xsl:when test="text() != 'Machine readable text'">
+            <xsl:apply-templates/>
+        </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="stdfooter">
+        <xsl:param name="style" select="'plain'"/>
+        <xsl:param name="file"/>
+        <div class="stdfooter autogenerated">
+            <address>
+            <xsl:call-template name="copyrightStatement"/>
+         </address>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:milestone[@unit='para']"/>
 </xsl:stylesheet>

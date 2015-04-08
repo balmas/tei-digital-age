@@ -504,7 +504,7 @@ then
         if (doc-available($alignDoc)) 
         then
             for $word in doc($alignDoc)//align:wds[@lnum=$alignLnum]/align:w
-            where not(matches($word/*:text, $match-nontext))
+            where not(matches($word/*:text, $match-nontext)) or ($e_includePunc = true() and matches($word/*:text,$match-punc))
             return
             element {QName("http://www.tei-c.org/ns/1.0","w")}
             {
