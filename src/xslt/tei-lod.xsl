@@ -60,6 +60,7 @@ See <http://www.gnu.org/licenses/>.
         </xsl:variable>
         <div id="tei-analyses" style="display:none;">
              <xsl:for-each-group select="$themes/*" group-by="@ana">
+                 <xsl:sort select="count(current-group())" data-type="number" order="descending"></xsl:sort>
                  <xsl:value-of select="current-group()[1]/@ana"/>,<xsl:value-of select="count(current-group())"></xsl:value-of><xsl:text>
                                  </xsl:text>                                
              </xsl:for-each-group>
@@ -76,6 +77,10 @@ See <http://www.gnu.org/licenses/>.
                     data-verb="http://data.perseus.org/rdfvocab/cite/imageViewer"
                     data-formatter="set_endpoint_map"
                     data-result-id="viewer"/>
+            </div>
+            <div id="tei-theme-words" style="display:none;">
+                <h2></h2>
+                <ul></ul>
             </div>
         </div>
          <xsl:if test="$teida:translationFile">

@@ -32,8 +32,8 @@
 
 .tei-aligned-text {
     float: right;
-    right: -40%;
-    width: 40%;
+    right: -30%;
+    width: 30%;
     /** overflow: scroll;
     border: 1px solid black; **/
     padding: 1em;
@@ -44,12 +44,22 @@
 }
 
 .bar:hover {
-  fill: brown;
+  /*fill: brown;*/
   opacity: 0.5;
 }
 
 .axis {
   font: 10px sans-serif;
+}
+
+.barlabel {
+    font: 12px sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.themebar:hover .barlabel {
+    color: #C00000;
 }
 
 .axis path,
@@ -64,14 +74,14 @@
 }
 
 .highlight-theme {
-    background-color: brown;
+    background-color: steelblue;
     opacity: 0.5;
 }
 .click-theme {
     background-color: brown;
     opacity: 1;
 }
-.bar.click-theme, .bar.click-theme:hover {
+.bar.click-theme {
   fill: brown;
   opacity: 1;
 }
@@ -95,5 +105,10 @@ img {
 
 .tei_body, .tei-aligned-text {
     max-height: 800px;
+    overflow: scroll;
+}
+
+#tei-theme-words {
+    max-height: 600px;
     overflow: scroll;
 }

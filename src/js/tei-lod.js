@@ -33,7 +33,11 @@
          * Url to treebank viewer
          */
         syntaxUrl: 'http://repos.alpheios.net:8081/exist/rest/db/xq/treebank-xb-viewer.xq?&fmt=FORMAT&lang=LANG',
-        
+
+        /**
+         * Theme words
+         */
+        theme_words: {},
         /**
          * jQuery document ready function
          */
@@ -48,6 +52,15 @@
             PerseidsLD.do_verb_query();
             PerseidsLD.do_simple_query();
             $("#tei-analyses").click(function() { PerseidsTools.do_image_link(this); });
+            $(".tei-word[data-ana]").each(
+              function() {
+   
+                if ( ! teilod.theme_words[$(this).attr('data-ana')]) {
+                  teilod.theme_words[$(this).attr('data-ana')] = {};
+                }
+                teilod.theme_words[$(this).attr('data-ana')][$(this).text()] = 1; 
+              }
+            );
         },
         
         /**
@@ -106,15 +119,14 @@
                     $(this).addClass('highlight');
                     node.addClass('highlight');
                     if (node.length > 0) {
-                          $('.tei_body').stop();
                         if (isTranslation) {
+                          $('.tei_body').stop(false,false);
                           $('.tei_body').animate({
-                            scrollTop: ($(node[0]).position().top)},500);
+                            scrollTop: teilod.scrollTo($(node[0]))},1500);
                         } else {
-                          $('.tei-aligned-text').stop();
+                          $('.tei-aligned-text').stop(false,false);
                           $('.tei-aligned-text').animate({
-                            scrollTop: ($(node[0]).position().top)},500);
-                            
+                            scrollTop: teilod.scrollTo($(node[0]))},1500);
                         }
                     }
                 }
@@ -246,6 +258,7 @@
                 
                 var xAxis = d3.svg.axis()
                     .scale(x)
+                    .tickFormat('')
                     .orient("bottom");
                 
                 var yAxis = d3.svg.axis()
@@ -277,22 +290,35 @@
                     .style("text-anchor", "end")
                     .text("Occurrences");
 
-                svg.selectAll(".bar")
+                var bar = svg.selectAll(".bar")
                     .data(data)
-                    .enter().append("rect")
+                    .enter().append("g")
+                    .attr("class","themebar")
+                    .attr("transform",function(d,i) {
+                      return "translate( " + x(d.letter) + "," + 0 + " )";    
+                     });
+                bar.append("rect")
                     .attr("class", "bar")
-                    .attr("x", function(d) { return x(d.letter); })
                     .attr("width", x.rangeBand())
                     .attr("y", function(d) { return y(d.frequency); })
                     .attr("height", function(d) { return height - y(d.frequency)})
                     .attr("data-text", function(d) { return $.trim(d.letter)});
+                bar.append("text")
+                    .attr("class", "barlabel")
+                    .attr("x", -height)
+                    .attr("dx", ".5em")
+                    .attr("dy", "1.5em")
+                    .attr("transform","rotate(-90)")
+                    .text( function(d) { return $.trim(d.letter)});
+                  
                $(".bar").mouseover(function() {
-                    $(".tei-body").stop();
                     $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").addClass("highlight-theme");
                     var top = $(".tei-word[data-ana='" + $(this).attr("data-text") + "']");
-                    if (top.length > 0)
-                    $('.tei_body').animate({
-                        scrollTop: ($(top[0]).position().top)},500);
+                    if (top.length > 0) {
+                      $(".tei-body").stop(false,false);
+                      $('.tei_body').animate({
+                        scrollTop: teilod.scrollTo($(top[0]))},1500);
+                    }
                 });
                $(".bar").mouseout(function() {
                     $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").removeClass("highlight-theme");
@@ -301,8 +327,9 @@
         },
 
         toggleTheme: function(a_elem) {
-            var words = $(".tei-word[data-ana='" + $(a_elem).attr("data-text") + "']");
-            var images = $("#tei-images div[data-facs-theme='" + $(a_elem).attr("data-text") + "'] span");
+            var theme = $(a_elem).attr("data-text");
+            var words = $(".tei-word[data-ana='" + theme + "']");
+            var images = $("#tei-images div[data-facs-theme='" + theme + "'] span");
             var themeclass = "highlight-theme";
             var clickclass = "click-theme";
             var toggleOn = true;
@@ -317,8 +344,8 @@
               words.addClass(clickclass);
               var top = $(".tei-word[data-ana='" + $(a_elem).attr("data-text") + "']");
               if (top.length > 0) {
-                $('.tei_body').stop();
-                $('.tei_body').animate({scrollTop: ($(top[0]).position().top)},500);
+                $('.tei_body').stop(false,false);
+                $('.tei_body').animate({scrollTop: teilod.scrollTo($(top[0]))},1500);
               }
               if (images.length == 1 ) {
                 PerseidsTools.do_image_link(images.get(0));
@@ -328,16 +355,31 @@
               } else if (images.length > 1) {
                   console.log("We need to offer pagination of images");
               }
+              $("#tei-theme-words ul").empty();
+              $("#tei-theme-words h2").html(theme);
+              $.each(teilod.theme_words[theme],
+                function(key,value) {
+                  $("#tei-theme-words ul").append("<li>" + key + "</li>");
+                }  
+              );
+             $("#tei-theme-words").show("slow");
               //alert("This will eventually search all documents for " + $(this).attr("data-text") + " and display browseable results below");
             } else {
-              debugger;
               /** jQuery hasClass isn't working on the SVG element so we need to add/remove class manually **/
               $(a_elem).attr("class",oldclass.replace(' ' + clickclass, ""));
               words.removeClass(clickclass);
               if (images.length > 0 ) {
 	        jQuery('#ict_frame').slideUp("slow", function() {$("#hideictframe").hide()});
               }
+              $("#tei-theme-words").hide("slow");
             }
+        },
+
+        scrollTo: function(a_elem) {
+          console.log($(a_elem).text());
+          console.log("Postion: " + $(a_elem).position().top);
+          console.log("Top: " + $(a_elem).offset().top);
+          return $(a_elem).position().top - $(a_elem).height();
         }
 
         
