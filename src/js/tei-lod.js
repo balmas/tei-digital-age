@@ -61,6 +61,15 @@
                 teilod.theme_words[$(this).attr('data-ana')][$(this).text()] = 1; 
               }
             );
+            $(".tei-annotation-target").each(function() {
+                var elem = this;
+                teilod.findCite(
+                    $.trim($(elem).text()), 
+                    function(data) { 
+                        if (data.author) { $(elem).html(data.author + " " + data.work + " " + data.section); } 
+                    });
+            });
+            
         },
         
         /**
@@ -380,6 +389,10 @@
           console.log("Postion: " + $(a_elem).position().top);
           console.log("Top: " + $(a_elem).offset().top);
           return $(a_elem).position().top - $(a_elem).height();
+        },
+        
+        findCite: function(a_urn,a_callback) {
+            $.get("http://services.perseids.org/cite_mapper/find_cite?cite=" + a_urn, a_callback, "json");
         }
 
         

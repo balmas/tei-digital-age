@@ -17,15 +17,39 @@ See <http://www.gnu.org/licenses/>.
     version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:teida="http://data.perseus.org/namespaces/teida"
+    xmlns:cnt="http://www.w3.org/2011/content#"
+    xmlns:dcmit="http://purl.org/dc/dcmitype/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:oa="http://www.w3.org/ns/oa#"
+    xmlns:perseus="http://data.perseus.org/"
+    xmlns:lawd="http://lawd.info/ontology/"
+    xmlns:lode="http://linkedevents.org/ontology/#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
     exclude-result-prefixes="tei xsl teida">
     
     <xsl:output indent="yes" method="html"/>
     <xsl:preserve-space elements="*"/>
     <!-- file containing the aligned translation markup -->
-    <xsl:param name="teida:translationFile"></xsl:param>
+    <xsl:param name="teida:translationFile"/>
     <!-- file containing image tags -->
-    <xsl:param name="teida:imageFile"></xsl:param>
-    <xsl:param name="teida:urn">urn:cts:latinLit:phi0914.phi001</xsl:param>
+    <xsl:param name="teida:imageFile"/>
+    <xsl:param name="teida:oaFile"/>
+    <xsl:param name="teida:urn"/>
+    <xsl:param name="teida:treebankFile" select="concat($teida:urn,'tb.xml')"/>
+    <xsl:variable name="ctsUriPrefix" select="'http://data.perseus.org/texts/'"/>
+    <xsl:variable name="citeUriPrefix" select="'http://data.perseus.org/collections/'"/>
+    <xsl:variable name="citeCollection" select="'urn:cite:perseus:pdlvortex'"/>
+    <xsl:variable name="annotators" select="doc($teida:treebankFile)//annotator"/>
+    <xsl:variable name="workurn">
+        <xsl:analyze-string select="$teida:urn" regex="(urn:cts:.*?:.*?\..*?)\.">
+            <xsl:matching-substring>
+                <xsl:value-of select="regex-group(1)"></xsl:value-of>
+            </xsl:matching-substring>
+        </xsl:analyze-string>
+    </xsl:variable>
     
      <!-- startHook is called after processing the tei:body element -->
      <xsl:template name="startHook" exclude-result-prefixes="tei xsl teida">
@@ -33,42 +57,37 @@ See <http://www.gnu.org/licenses/>.
         </div>
          <iframe id="ict_frame" style="display:none;" src="" width="96%" height="220px"></iframe>
          <div style="display:none;" id="hideictframe" onclick="PerseidsTools.hideImageViewer();">Close Image Viewer</div>
-        <div id="tei-tools">
-        <!-- add some extra features to source text only -->
-        <xsl:if test="tei:text/@xml:lang != 'eng'">
-            <!-- add a div to contain the results of the lexicon lookup -->
-            <!--div id="tei-lemmas"><h2>Lexicon Lookup</h2><div class="tei-hint">Double-click on a word to lookup in the lexicon.</div></div-->
-        </xsl:if>
-         <!-- add thumbs -->
-     
+         <div id="tei-tools">
+            <!-- add some extra features to source text only -->
             
-         <!-- add syntax lookup -->
-         <xsl:variable name="themes">
-             <xsl:if test="//tei:w/@ana">
-                 <xsl:for-each select="//tei:w[@ana]" >
-                     <!-- skip the punctuation and the nils -->
-                     <xsl:if test="not(@ana = 'AuxK') and not(@ana='AuxX') and not(@ana='AuxZ') and not(@ana='nil') and not(@ana='nil nil') and not(@ana=' ')">
-                        <ana><xsl:copy-of select="@ana"/></ana>
-                     </xsl:if>
-                 </xsl:for-each>
-             </xsl:if>
-             <xsl:if test="$teida:imageFile">
-                 <xsl:for-each select="doc($teida:imageFile)//tei:w[@facs]" >
-                     <ana><xsl:attribute name="ana"><xsl:copy-of select="text()"/></xsl:attribute></ana>
-                 </xsl:for-each>
-             </xsl:if>
-        </xsl:variable>
-        <div id="tei-analyses" style="display:none;">
-             <xsl:for-each-group select="$themes/*" group-by="@ana">
-                 <xsl:sort select="count(current-group())" data-type="number" order="descending"></xsl:sort>
-                 <xsl:value-of select="current-group()[1]/@ana"/>,<xsl:value-of select="count(current-group())"></xsl:value-of><xsl:text>
-                                 </xsl:text>                                
-             </xsl:for-each-group>
-        </div>
+            <!-- calculate themes -->
+            <xsl:variable name="themes">
+                <xsl:if test="//tei:w/@ana">
+                    <xsl:for-each select="//tei:w[@ana]" >
+                        <!-- skip the punctuation and the nils -->
+                        <xsl:if test="not(@ana = 'AuxK') and not(@ana='AuxX') and not(@ana='AuxZ') and not(@ana='nil') and not(@ana='nil nil') and not(@ana=' ')">
+                           <ana><xsl:copy-of select="@ana"/></ana>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:if>
+                <xsl:if test="$teida:imageFile">
+                    <xsl:for-each select="doc($teida:imageFile)//tei:w[@facs]" >
+                        <ana><xsl:attribute name="ana"><xsl:copy-of select="text()"/></xsl:attribute></ana>
+                    </xsl:for-each>
+                </xsl:if>
+            </xsl:variable>
+            <!--div to hold the results of the theme analysis -->
+            <div id="tei-analyses" style="display:none;">
+                 <xsl:for-each-group select="$themes/*" group-by="@ana">
+                     <xsl:sort select="count(current-group())" data-type="number" order="descending"></xsl:sort>
+                     <xsl:value-of select="current-group()[1]/@ana"/>,<xsl:value-of select="count(current-group())"></xsl:value-of><xsl:text>
+                                     </xsl:text>                                
+                 </xsl:for-each-group>
+            </div>
             <div id="imgthumbs">
                 <div class="perseidsld_query_obj_simple" 
                     data-queryuri="http://services.perseids.org/fuseki/ds/query?query="
-                    data-obj="{$teida:urn}" data-verb="http://www.cidoc-crm.org/cidoc-crm/P138_represents"
+                    data-obj="{$workurn}" data-verb="http://www.cidoc-crm.org/cidoc-crm/P138_represents"
                     data-refs-verb="http://purl.org/dc/terms/references"
                     data-endpoint-verb="http://data.perseus.org/rdfvocab/cite/imageServer"
                     data-formatter="thumbs"/>
@@ -111,6 +130,7 @@ See <http://www.gnu.org/licenses/>.
         <xsl:if test="//tei:w/@ana">
             <!--iframe id="tei-syntax-frame" src="syntaxview.html"/-->
         </xsl:if>
+        <xsl:call-template name="make_oa"/>
     </xsl:template>
     <!-- hook which pulls  css into the HTML head -->
     <xsl:template name="cssHook" exclude-result-prefixes="tei xsl teida">
@@ -124,7 +144,7 @@ See <http://www.gnu.org/licenses/>.
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <!-- javascript library for the tei-digital-age demo -->
         <script type="text/javascript" src="../src/js/tei-lod.js"></script>  
-        <script src="/sosoljs/perseids-ld.js"></script>
+        <script src="http://sosol.perseids.org/sosol/javascripts/perseids-ld.js"></script>
         <script src="../src/js/perseids-tools.js"></script>
         <!-- jQuery document ready function to initialize the page elements on load -->
         <script type="text/javascript">
@@ -245,6 +265,7 @@ See <http://www.gnu.org/licenses/>.
         <xsl:choose>
         <xsl:when test="text() != 'Machine readable text'">
             <xsl:apply-templates/>
+            <xsl:call-template name="make_annotator"/>
         </xsl:when>
         </xsl:choose>
     </xsl:template>
@@ -252,12 +273,128 @@ See <http://www.gnu.org/licenses/>.
     <xsl:template name="stdfooter">
         <xsl:param name="style" select="'plain'"/>
         <xsl:param name="file"/>
-        <div class="stdfooter autogenerated">
-            <address>
-            <xsl:call-template name="copyrightStatement"/>
-         </address>
-        </div>
+            <footer>
+                <div class="logo-container floatleft">
+                    <a href="http://sites.tufts.edu/perseids"><img class="left logo" src="../src/images/perseids_logo.png"/></a>
+                </div>
+                <div class="logo-container floatright">
+                    <a href="http://perseus.tufts.edu/hopper"><img class="right logo" src="../src/images/perseus_logo.jpg"/></a>
+                </div>
+                <div class="center">
+                    <p class="footertext left">This project has received support from the Andrew W. Mellon Foundation, Tufts University, the National Endowment for the Humanities [grant HD-51548-12] and the Institute of Museum and Library Services.</p>		
+                    <p class="footertext left"><span class="rights">Software licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPL 3.0 License</a>.</span></p>
+                    <p class="footertext left"><span class="rights">Images, text and data licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-ShareAlike 3.0 United States License.</a></span></p>
+                </div>
+            </footer>
     </xsl:template>
     
     <xsl:template match="tei:milestone[@unit='para']"/>
+    
+    <xsl:template name="make_annotator">
+            <div class="tei-annotation-info">
+                <div class="tei-annotation-target"><xsl:value-of select="$teida:urn"/></div>
+                <span class="tei-annotated-by">Annotated By:</span>
+                <ul class="tei-annotators">
+                <xsl:for-each select="$annotators[name/text() != '']">
+                    <li><a href="{uri}"><xsl:value-of select="name"/></a></li>
+                </xsl:for-each>
+                </ul>
+                <!-- OA DOWNLOAD LINK -->
+                <div id="tei-oa-download">
+                    <a href="{$teida:oaFile}" download="{$teida:oaFile}">Download Thematic Annotations</a>
+                </div>
+            </div>    
+    </xsl:template>
+    
+    <xsl:template name="make_oa">
+        <!-- add syntax lookup -->
+        <xsl:variable name="themes">
+            <xsl:if test="//tei:w/@ana">
+                <xsl:for-each select="//tei:w[@ana]" >
+                    <!-- skip the punctuation and the nils -->
+                    <xsl:if test="not(@ana = 'AuxK') and not(@ana='AuxX') and not(@ana='AuxZ') and not(@ana='nil')">
+                        <ana>
+                            <xsl:copy-of select="@ana"/>
+                            <xsl:attribute name="exact"><xsl:copy-of select="text()"/></xsl:attribute>
+                            <xsl:attribute name="prefix" select="string-join(preceding-sibling::*/text(), ' ')"/>
+                            <xsl:attribute name="suffix" select="string-join(following-sibling::*/text(), ' ')"/>
+                        </ana>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:if>
+            <xsl:if test="$teida:imageFile">
+                <xsl:for-each select="doc($teida:imageFile)//tei:w[@facs]" >
+                    <ana>
+                        <xsl:attribute name="ana"><xsl:copy-of select="text()"/></xsl:attribute>
+                        <xsl:attribute name="resource"><xsl:value-of select="@facs"/></xsl:attribute>
+                    </ana>
+                </xsl:for-each>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:result-document href="{$teida:oaFile}" method="xml">
+        <rdf:RDF
+            xmlns:cnt="http://www.w3.org/2011/content#"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:lawd="http://lawd.info/ontology/"
+            xmlns:dcmit="http://purl.org/dc/dcmitype/"
+            xmlns:oa="http://www.w3.org/ns/oa#"
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            >
+            <xsl:for-each-group select="$themes/*" group-by="@ana">
+                <xsl:variable name="tag" select="current-group()[1]/@ana"/>
+                <xsl:for-each select="current-group()">                
+                    <xsl:variable name="nid" select="@n"/>
+                    <xsl:variable name="uuid" select="generate-id(.)"/>
+                    <xsl:variable name="citeurn" select="concat($citeUriPrefix,$citeCollection,'.',$uuid,'.1')"/>
+                    <oa:Annotation rdf:about="{$citeurn}">
+                        <xsl:choose>
+                            <xsl:when test="@exact">
+                                <oa:hasTarget rdf:resource="{concat($citeurn,'#target')}"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <oa:hasTarget rdf:resource="{@resource}"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        
+                        <oa:motivatedBy rdf:resource="http://www.w3.org/ns/oa#tagging"/>
+                        <oa:hasBody>    
+                            <oa:Tag rdf:about="{concat($citeurn,'#tag')}">
+                                <cnt:chars><xsl:value-of select="$tag"/></cnt:chars>
+                                <rdf:type rdf:resource="http://www.w3.org/2011/content#ContentAsText"/>
+                            </oa:Tag>
+                        </oa:hasBody>
+                        <oa:annotatedAt><xsl:value-of select="current-date()"/></oa:annotatedAt>
+                        <xsl:for-each select="$annotators[not(short/text())]">
+                            <oa:serializedBy>
+                                <xsl:element name="prov:SoftwareAgent">
+                                    <xsl:attribute name="rdf:about"><xsl:value-of select="uri"/></xsl:attribute>
+                                </xsl:element>
+                            </oa:serializedBy>
+                        </xsl:for-each>
+                        <xsl:for-each select="$annotators[name/text() != '']">
+                            <oa:annotatedBy>
+                                <foaf:Person rdf:about="{uri}">
+                                    <foaf:name><xsl:value-of select="name"/></foaf:name>
+                                </foaf:Person>
+                            </oa:annotatedBy>
+                        </xsl:for-each>
+                    </oa:Annotation>
+                    <xsl:if test="@exact">
+                        <rdf:Description rdf:about="{concat($citeurn,'#target')}">
+                            <rdf:type rdf:resource="http://www.w3.org/ns/oa#SpecificResource"/>
+                            <oa:hasSource rdf:resource="{concat($ctsUriPrefix,$teida:urn)}"/>
+                            <oa:hasSelector rdf:resource="{concat($citeurn,'#target-sel')}"/>
+                        </rdf:Description>
+                        <rdf:Description rdf:about="{concat($citeurn,'#target-sel')}">
+                            <rdf:type rdf:resource="http://www.w3.org/ns/oa#TextQuoteSelector"/>
+                            <oa:exact><xsl:value-of select="@exact"/></oa:exact>
+                            <oa:prefix><xsl:value-of select="@prefix"/></oa:prefix>
+                            <oa:suffix><xsl:value-of select="@suffix"/></oa:suffix>
+                        </rdf:Description>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:for-each-group>
+        </rdf:RDF>
+        </xsl:result-document>
+    </xsl:template>
 </xsl:stylesheet>
