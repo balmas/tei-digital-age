@@ -129,11 +129,11 @@
                     node.addClass('highlight');
                     if (node.length > 0) {
                         if (isTranslation) {
-                          $('.tei_body').stop(false,false);
+                          $('.tei_body').stop(true,true);
                           $('.tei_body').animate({
                             scrollTop: teilod.scrollTo($(node[0]))},1500);
                         } else {
-                          $('.tei-aligned-text').stop(false,false);
+                          $('.tei-aligned-text').stop(true,true);
                           $('.tei-aligned-text').animate({
                             scrollTop: teilod.scrollTo($(node[0]))},1500);
                         }
@@ -324,7 +324,7 @@
                     $(".tei-word[data-ana='" + $(this).attr("data-text") + "']").addClass("highlight-theme");
                     var top = $(".tei-word[data-ana='" + $(this).attr("data-text") + "']");
                     if (top.length > 0) {
-                      $(".tei-body").stop(false,false);
+                      $(".tei-body").stop(true,true);
                       $('.tei_body').animate({
                         scrollTop: teilod.scrollTo($(top[0]))},1500);
                     }
@@ -353,7 +353,7 @@
               words.addClass(clickclass);
               var top = $(".tei-word[data-ana='" + $(a_elem).attr("data-text") + "']");
               if (top.length > 0) {
-                $('.tei_body').stop(false,false);
+                $('.tei_body').stop(true,true);
                 $('.tei_body').animate({scrollTop: teilod.scrollTo($(top[0]))},1500);
               }
               if (images.length == 1 ) {

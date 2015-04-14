@@ -105,7 +105,7 @@ img {
 
 .tei_body, .tei-aligned-text {
     max-height: 800px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #tei-theme-words {
