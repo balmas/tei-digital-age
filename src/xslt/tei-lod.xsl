@@ -39,6 +39,7 @@ See <http://www.gnu.org/licenses/>.
     <xsl:param name="teida:oaFile"/>
     <xsl:param name="teida:urn"/>
     <xsl:param name="teida:treebankFile" select="concat($teida:urn,'tb.xml')"/>
+    <xsl:param name="teida:imageTarget" select="'urn:cts:pdltmp:vortex.img001'"/>
     <xsl:variable name="ctsUriPrefix" select="'http://data.perseus.org/texts/'"/>
     <xsl:variable name="citeUriPrefix" select="'http://data.perseus.org/collections/'"/>
     <xsl:variable name="citeCollection" select="'urn:cite:perseus:pdlvortex'"/>
@@ -87,7 +88,7 @@ See <http://www.gnu.org/licenses/>.
             <div id="imgthumbs">
                 <div class="perseidsld_query_obj_simple" 
                     data-queryuri="http://services.perseids.org/fuseki/ds/query?query="
-                    data-obj="{$workurn}" data-verb="http://www.cidoc-crm.org/cidoc-crm/P138_represents"
+                    data-obj="{$teida:imageTarget}" data-verb="http://www.cidoc-crm.org/cidoc-crm/P138_represents"
                     data-refs-verb="http://purl.org/dc/terms/references"
                     data-endpoint-verb="http://data.perseus.org/rdfvocab/cite/imageServer"
                     data-formatter="thumbs"/>
